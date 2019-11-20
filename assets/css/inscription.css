@@ -1,0 +1,41 @@
+html{
+  width: 100%;
+  height: auto;
+}
+  .form-group{
+    width: 380px;
+    height: 570px;
+    position: fixed;
+    margin: auto;
+    top: 30%;
+    left: 40%;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 50px;
+  }
+  p{
+    background-color: #F50057;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Nasalization';
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition:.2s ease-in;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  span{
+    font-family: 'Nasalization';
+  }
+  .valide{
+    font-family: 'Nasalization';
+    margin-left: 20%;
+  }
+
+  

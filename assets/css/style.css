@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Astro';
+    src: url(astro.ttf);
+  }
+@font-face {
+    font-family: 'Nasalization';
+    src: url(nasalization-rg.ttf);
+  }
+
+body{
+    background: url(../img/3D-HD-Colours.jpg);
+}
+a{  
+    font-family: 'Nasalization';
+    color: white;
+}
+a:hover{
+    color: orangered;
+}
+.navbar-toggler-icon{
+    color: white; 
+}
+.search{
+    font-family: 'Nasalization';
+}
+h1{
+    font-family: 'Astro', arial, serif;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    width: auto;
+    height: 10%;
+    margin-top: 2%;
+    text-align: center;
+}
+.prez{
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px ;
+}
