@@ -4,12 +4,12 @@ html{
 }
   .form-group{
     width: 380px;
-    height: 570px;
-    position: fixed;
-    margin: auto;
+  
+   
+    
     top: 30%;
     left: 40%;
-    border-radius: 50px;
+    border-radius: 30px;
     background: rgba(255, 255, 255, 0.7);
     margin-bottom: 50px;
   }
@@ -33,9 +33,5 @@ html{
   span{
     font-family: 'Nasalization';
   }
-  .valide{
-    font-family: 'Nasalization';
-    margin-left: 20%;
-  }
-
+  
   
