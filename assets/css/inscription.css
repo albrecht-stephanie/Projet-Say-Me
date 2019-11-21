@@ -4,12 +4,8 @@ html{
 }
   .form-group{
     width: 380px;
-  
-   
-    
     top: 30%;
-    left: 40%;
-    border-radius: 30px;
+    border-radius: 30px 30px 10px 10px;
     background: rgba(255, 255, 255, 0.7);
     margin-bottom: 50px;
   }
@@ -25,13 +21,23 @@ html{
     z-index: 40;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
     transition:.2s ease-in;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  
   }
   span{
     font-family: 'Nasalization';
+  }
+  .identity{
+    background-color: rgb(236, 60, 29);
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Nasalization';
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition:.2s ease-in;
   }
   
   
