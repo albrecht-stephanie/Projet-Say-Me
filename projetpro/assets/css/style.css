@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Astro';
+    src: url(astro.ttf);
+  }
+@font-face {
+    font-family: 'Nasalization';
+    src: url(nasalization-rg.ttf);
+  }
+
+body{
+    background: url(../img/3D-HD-Colours.jpg);
+}
+/*navbar*/
+a{  
+    font-family: 'Nasalization';
+    color: white;
+}
+a:hover{
+    color: orangered;
+}
+.navbar-toggler-icon{
+    color: white; 
+}
+.search, h2{
+    font-family: 'Nasalization';
+}
+/*accueil*/
+h1{
+    font-family: 'Astro', arial, serif;
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    width: auto;
+    height: 10%;
+    margin-top: 2%;
+    text-align: center;
+}
+.prez{
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px ;
+}
+/*formulaires inscription et connection*/
+.first, .second{
+    width: 400px;
+    border-radius: 25px 25px 25px 25px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+   label{
+    font-family: 'Nasalization';
+  }
+  .inscription{
+    background-color: #F50057;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Nasalization';
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition:.2s ease-in;
+  
+  }
+  .identity{
+    background-color: rgb(236, 60, 29);
+    border-radius: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-family: 'Nasalization';
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    transition:.2s ease-in;
+  }
+  /*formulaire ajout d'avis*/
+  .addReview{
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 20px;
+  }
+  
+  .textReview textarea{
+    vertical-align: top;
+    overflow: auto;
+    margin-bottom: 10px;
+  }
+  /*signale la validité ou non des champs concernés*/
+  input:invalid {
+    border: 1px dashed red;
+  }
+  
+  input:valid {
+    border: 1px solid green;
+  }
