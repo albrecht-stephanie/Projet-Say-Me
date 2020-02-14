@@ -39,9 +39,47 @@ h1{
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px ;
 }
+/*card*/
+h2{
+  text-align : center;
+}
+h3{
+  font-size: 20px;
+  font-weight: bold;
+}
+.card{
+  max-height: auto;
+  margin-bottom: 20px;
+}
+.card-body{
+  max-height: 70%;
+}
+img{
+  width: 80%;
+  height: auto;
+  object-fit: cover; 
+}
+/*notation étoile*/
+.rating {
+  direction: rtl;
+  margin-left: 10%;
+}
+.rating i {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 3em;
+  transition: color .4s;
+}
+.rating i:hover,
+.rating i:focus,
+.rating i:hover ~ i,
+.rating i:focus ~ i {
+  color: orange;
+  cursor: pointer;
+}
 /*formulaires inscription et connection*/
 .first, .second{
-    width: 400px;
+    width: 450px;
     border-radius: 25px 25px 25px 25px;
     background: rgba(255, 255, 255, 0.7);
   }

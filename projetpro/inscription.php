@@ -1,3 +1,6 @@
+<?php
+//include 'form_inscript_validat.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,10 +19,10 @@
 </header>
 <!--fin de l'entête-->
     <!--Début des Formulaires-->
-    <div class="container">
+    <div class="container d-flex flex-wrap align-content-around">
       <!--Formulaire d'inscription-->
-      <div class="row d-flex flex-wrap align-content-start offset-2">
-        <form class="first" method="post" action="#">
+      <div class="row ">
+        <form class="first col-lg-5 offset-1" method="post" action="#">
           <div class="form1 col-lg-9 offset-2 col-sm-12 ml-5 mr-2 mt-2 pb-2">
             <h2 class="inscription">Incris-toi <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h2>
               <div class="lastName ml-3 mr-3">
@@ -51,7 +54,7 @@
         </form>
       <!--fin du formulaire d'inscription-->
       <!--début formulaire d'identifiaction-->
-       <form class="second" method="post" action="#">
+       <form class="second col-lg-5 offset-1" method="post" action="#">
         <div class="form2 col-lg-9 offse-2 col-sm-12 ml-5 mt-2 pb-2">
           <h2 class="identity">Connectes-toi <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h2>
             <div class="mail ml-3 mr-3">

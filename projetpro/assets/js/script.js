@@ -42,10 +42,8 @@ if(!checkMail.test(mail)){//verif mail + message erreur
 }
 if(!isValid){
     event.preventDefault();
-    
-$(document).ready(function() {
+    $(document).ready(function() {
     $('#inputPassword, #inputConfirmPassword').on('keyup', function(e) {
- 
      if($('#password').val() != '' && $('#confirmPassword').val() != '' && $('#password').val() != $('#confirmPassword').val())
             {
                $('#password').removeClass().addClass('alert alert-error').html('Les mots de passe ne correspondent pas');
@@ -74,6 +72,9 @@ $(document).ready(function() {
         }
         return true;
     })
+}
+}
+}
 }
 
     

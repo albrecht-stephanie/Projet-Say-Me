@@ -1,41 +1,18 @@
 <?php
-$isSubmitted = false;
-$message= "";
-//regex contrôle du formulaire
-$regexText = "/^[A-Za-zéÉ][A-Za-záàâäãåçéèêëíìîïñóòôöõúùûüýÿæœ]+((-| )[A-Za-záàâäãåçéèêëíìîïñóòôöõúùûüýÿæœ]+)?$/";
-$title = $review = $picture = '';
-$formSubmitted = false;
-$errors = [];
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $formSubmitted = true;
-    //verif champ title
-    $title = trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING)); //enlève les espaces vides avant et après + nettoyage en fonction du type 
-    if (empty($title)) {//verifie si le champ est vide
-        $errors['title'] = 'Veuillez renseigner le prénom';
-    } elseif (!preg_match($regexText, $title)) {//comparatif avec la regex correspondante
-        $errors['title'] = 'Votre titre contient des caractères non autorisés !';
-    }
-    //verif texte de l'avis
-    $review = trim(filter_input(INPUT_POST,'review',FILTER_SANITIZE_STRING));
-    if (empty($review)) {
-        $errors['review'] = 'Veuillez laisser un descriptif de votre avis';
-    }
-    //verif envoi de fichier et de son extension
-    if (isset($_FILES['picture']) && $_FILES['picture']['error'] == 0) {
-        $fileInfo = pathinfo($_FILES['picture']['name']);// Récupére le nom du fichier et son extension dans les tableaux concernés (pour récupérer les clés et les valeurs d'un tableau, utiliser le var_dump)
-        $fileName = $fileInfo['basename'];// Récupère le chemin et l'extension du fichier
-        if (strtolower($fileInfo['extension']) == 'png, jpeg, jpg') { //convertit tous les caractères en minuscule
-            $message= 'Merci, votre fichier ' . htmlspecialchars($picture) . ' a bien été pris en compte';
-            $formSubmitted = false; // Cache le formulaire si la condition est remplie
-        }
-    } else {
-        $message = 'Veuillez réessayer, l\'envoi de votre fichier n\'a pas abouti';
-        }
-    }
-}
-
-if ($formSubmitted) { // Si le formSubmitted est toujours "true" affiche le formulaire 
-    ?>
+//include 'form-validation.php';
+//if ($isSubmitted && count($errors) == 0) {
+   // require 'params.php';
+    //$db = connectDb();
+    //$db->exec("SET CHARACTER SET utf8");
+    //$query = "INSERT INTO `views` (`title`, `review`, `picture`) VALUE (:title, :review, :picture)"or die ('Erreur SQL !'.$req.' '.mysql_error());
+    //$sth = $db->prepare($query);
+   // $sth->bindValue('title', $lastname, PDO::PARAM_STR);
+    //$sth->bindValue('review', $firstname, PDO::PARAM_STR);
+   // $sth->bindValue('picture', $birthdate, PDO::PARAM_STR);
+    
+   // $execute = $sth->execute();
+   // }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,12 +33,12 @@ if ($formSubmitted) { // Si le formSubmitted est toujours "true" affiche le form
 <div class="container">
     <div class="row">
     <div class="addReview col-lg-6 offset-3 col-sm-12">
-        <form method="post" action="#" enctype="multipart/form-data">>
+        <form method="post" action="#" enctype="multipart/form-data">
         <h2 class="nameForm text-center">Ajout d'un avis</h2>
         <div class="title">
             <label for="title">Titre de l'avis</label>
-            <input type="text" id="title" name="title" required <?php echo $title ?>>
-            <span class="text-danger"><?= ($errors['title']) ?? '' ?></span>
+            <input type="text" id="title" name="title" required <?php //echo $title ?>>
+           <!-- <span class="text-danger"><?//($errors['title']) ?? '' ?></span>-->
         </div>
          <div class="textReview">
          <label for="review"> Texte:</label>
@@ -71,12 +48,15 @@ if ($formSubmitted) { // Si le formSubmitted est toujours "true" affiche le form
             <label for="picture">Photos du produit</label>
             <input type="hidden" name="MAX_FILE_SIZE" value="104857600"/><!-- Limite 100Mo -->
             <input type="file" id="picture" name="picture" accept="image/png, image/jpeg, image/jpg" required><br>
-            <button type="submit3" class="col-8 offset-2 btn bg-warning mt-2 mb-3"> Ajouter l'image</button>
+        </div> 
+        <div>
+            <label for="note">Note</label>
+            <input type="text" id="note" name="note" placeholder="8/10">
         </div>
+            <button type="submit3" class="col-8 offset-2 btn bg-warning mt-2 mb-3"> Ajouter l'image</button>
+        
         </form>
     </div>
 </div>
-<?php }
-?>
-<p><?= $message2 ?></p>
+<p><?php $message ?></p>
 <?php include 'footer.php' ?>
