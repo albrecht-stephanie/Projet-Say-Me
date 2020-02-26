@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.digimeg-nav-wrap {
+    position: relative;
+    margin-right: auto;
+    z-index: 300;
+}
+
+.digimeg-nav-wrap .digimeg-main-nav {
+    display: block;
+    width: 100%;
+}
+
+.digimeg-nav-wrap .digimeg-main-nav li {
+    list-style-type: none;
+    display: inline;
+    float: left;
+}
+
+.digimeg-nav-wrap .digimeg-main-nav li a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Nasalization';
+    color: white;
+    position: relative;
+}
+
+.digimeg-nav-wrap .digimeg-main-nav li a:hover {
+    color: orangered;
+}
+.digimeg-group:after {
+    content: '.';
+    visibility: hidden;
+    clear: both;
+    display: block;
+    line-height: 0px;
+}
+
+.digimeg-sub-nav {
+    position: relative;
+}
+.digimeg-sub-nav li {
+    display: block;
+    width: 100%;
+   
+}
+.digimeg-sub-nav>li {
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+.digimeg-nav-item-content {
+    padding: 10px;
+    color: black;
+}
+.digimeg-nav-item-content a {
+    color: black;
+}
+
+
+

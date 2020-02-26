@@ -11,16 +11,7 @@ body{
     background: url(../img/3D-HD-Colours.jpg);
 }
 /*navbar*/
-a{  
-    font-family: 'Nasalization';
-    color: white;
-}
-a:hover{
-    color: orangered;
-}
-.navbar-toggler-icon{
-    color: white; 
-}
+
 .search, h2{
     font-family: 'Nasalization';
 }
@@ -32,50 +23,80 @@ h1{
     width: auto;
     height: 10%;
     margin-top: 2%;
+    margin-bottom: 2%;
     text-align: center;
 }
 .prez{
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px ;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 /*card*/
 h2{
-  text-align : center;
+  margin: 3%;
+  margin-left: 30%;
 }
 h3{
   font-size: 20px;
   font-weight: bold;
 }
+.title-waiting{
+  margin-left : 15%;
+}
 .card{
   max-height: auto;
+  margin-left: 20px;
   margin-bottom: 20px;
 }
-.card-body{
-  max-height: 70%;
-}
+
 img{
   width: 80%;
+  margin-left: 10%;
   height: auto;
   object-fit: cover; 
 }
+.card-footer h4{
+  font-size: 20px;
+}
+.card-footer a{
+  color: white;
+  margin-bottom: 5px;
+}
+.card-footer a:hover{
+  color: orangered;
+}
 /*notation étoile*/
-.rating {
+#card-footer {
   direction: rtl;
   margin-left: 10%;
 }
-.rating i {
-  color: #aaa;
+.card-footer i {
+  color:orange;
   text-decoration: none;
-  font-size: 3em;
+  font-size: 1em;
   transition: color .4s;
 }
-.rating i:hover,
-.rating i:focus,
-.rating i:hover ~ i,
-.rating i:focus ~ i {
-  color: orange;
-  cursor: pointer;
+/*ancre flèche haut*/
+#scroll_to_top { 
+  position: fixed; 
+  width: 25px; 
+  height: 25px; 
+  bottom: 50px; 
+  right: 50px; 
+} 
+/*footer*/
+.btn-footer{
+  background-color: #343A40;
+}
+.btn{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#scroll_to_top img { 
+  width: 50px; 
 }
 /*formulaires inscription et connection*/
 .first, .second{
@@ -132,4 +153,12 @@ img{
   
   input:valid {
     border: 1px solid green;
+  }
+  /*tchat*/
+  #waiting{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 10px ;
+    margin: auto;
+    margin-top: 2%;
   }

@@ -1,31 +1,215 @@
 <!--Début NavBar-->
-<nav class="navbar navbar-expand-lg sticky-top bg-dark">
-        <a class="navbar-brand" href="index.php">Accueil</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item mr-5 ml-5">
-              <a class="nav-link" href="index.php">Hight Tech</a>
-            </li>
-            <li class="nav-item mr-5">
-              <a class="nav-link" href="#">Electro-Ménager</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Véhicules</a>
-            </li>
-          </ul>
-          <form class="form-inline my-lg-0">
-            <a class="btn btn-danger mr-2" href="inscription.php" title="Laisse un Avis et T'Chat !">
-                  <i class="fa fa-user" aria-hidden="true"></i>  Identifie-toi et Participe !</a>
-            <a class="btn btn-warning"><i class="fa fa-comments" aria-hidden="true"></i>
-              T'Chat</a>
-            <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
-            <button class="search btn btn-outline-info  my-sm-0" type="submit">Rechercher</button>
-          </form>
-        </div>
-      </nav>
+<div clas="container">
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="digimeg-nav-wrap">
+      <ul class="digimeg-group digimeg-main-nav">
+        <li><a href="index.php" data-subnav="define-subnav" class="digimeg-nav-item"> Accueil</a></li>
+        <!-- Active mark for this menu item -->
+        <li><a href="#" data-subnav="Hight-Tech-subnav" class="digimeg-nav-item"> Hight-Tech <span
+              class="digimeg-active-mark"></span> </a> </li>
+        <li> <a href="#" data-subnav="Electro-Ménager-subnav" class="digimeg-nav-item"> Electro-Ménager <span
+              class="digimeg-active-mark"></span> </a> </li>
+      </ul>
+      <ul class="digimeg-nav-down-content digimeg-sub-nav">
+        <li id="Hight-Tech-subnav">
+          <div class="digimeg-nav-item-content digimeg-group">
+            <div class="nicemenu verticle" data-pos="list.right" data-classes="active">
+              <div class="nicemenu-item">
+                <h5>Smartphone</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Samsung</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                      <li><a href="#">Samsung J7</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Apple</h6>
+                    <ul>
+                      <li><a href="#">Iphone 11</a></li>
+                      <li><a href="#">Iphone 8</a></li>
+                      <li><a href="#">Iphone X</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Huawei</h6>
+                    <ul>
+                      <li><a href="#">Huawei P30 Pro</a></li>
+                      <li><a href="#">Huawei</a></li>
+                      <li><a href="#">Huawei</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Xiaomi</h6>
+                    <ul>
+                      <li><a href="#">Xiaomi Mi 9T Pro</a></li>
+                      <li><a href="#">Xiaomi Redmi Note 8T</a></li>
+                      <li><a href="#">Xiaomi Mi A3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="nicemenu-item">
+                <h5>Tablette</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Samsung</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Apple</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="nicemenu-item">
+                <h5>Montre Connectée</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Samsung</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Apple</h6>
+                    <ul>
+                      <li><a href="#">Apple Watch</a></li>
+                      <li><a href="#">Apple Watch</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Huawei</h6>
+                    <ul>
+                      <li><a href="#">Watch GT Active</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="nicemenu-item">
+                <h5>PC / PC Portable</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Acer</h6>
+                    <ul>
+                      <li><a href="#">Acer Predator Helios</a></li>
+                      <li><a href="#">Acer Spin 7</a></li>
+                      <li><a href="#">Acer Switch 3</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Asus</h6>
+                    <ul>
+                      <li><a href="#">ZenBook-Pro-Duo-UX581GV</a></li>
+                      <li><a href="#">VivoBook-S14/a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>HP</h6>
+                    <ul>
+                      <li><a href="#">HP Gaming Pavilion 15</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <li id="Electro-Ménager-subnav">
+          <div class="digimeg-nav-item-content digimeg-group">
+            <div class="nicemenu verticle" data-pos="list.right" data-classes="active">
+
+              <div class="nicemenu-item">
+                <h5>Cuisiner</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Samsung</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                      <li><a href="#">Samsung J7</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Wirhpool</h6>
+                    <ul>
+                      <li><a href="#">Iphone 11</a></li>
+                      <li><a href="#">Iphone 8</a></li>
+                      <li><a href="#">Iphone X</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Brant</h6>
+                    <ul>
+                      <li><a href="#">Huawei P30 Pro</a></li>
+                      <li><a href="#">Huawei</a></li>
+                      <li><a href="#">Huawei</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="nicemenu-item">
+                <h5>Entretien du linge</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Samsung</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                      <li><a href="#">Samsung J7</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Apple</h6>
+                    <ul>
+                      <li><a href="#">Iphone 11</a></li>
+                      <li><a href="#">Iphone 8</a></li>
+                      <li><a href="#">Iphone X</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="nicemenu-item">
+
+                <h5>Entretien de la maison</h5>
+                <div class="nicemenu-sub">
+                  <div class="w-3-1">
+                    <h6>Samsung</h6>
+                    <ul>
+                      <li><a href="#">Samsung S9+</a></li>
+                      <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
+                      <li><a href="#">Samsung J7</a></li>
+                    </ul>
+                  </div>
+                  <div class="w-3-1">
+                    <h6>Apple</h6>
+                    <ul>
+                      <li><a href="#">Iphone 11</a></li>
+                      <li><a href="#">Iphone 8</a></li>
+                      <li><a href="#">Iphone X</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+    <form class="form-inline my-lg-0">
+      <a class="btn btn-danger mr-2" href="inscription.php" title="Laisse un Avis et T'Chat !">
+        <i class="fa fa-user" aria-hidden="true"></i> Identifie-toi et Participe !</a>
+      <a class="btn btn-warning" href="tchat.php"><i class="fa fa-comments" aria-hidden="true"></i> T'Chat</a>
+      <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
+      <button class="search btn btn-outline-info  my-sm-0" type="submit">Rechercher</button>
+    </form>
+</div>
+</nav>
+</div>
 <!--Fin NavBar-->
-
-
