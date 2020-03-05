@@ -1,164 +1,338 @@
 @font-face {
-    font-family: 'Astro';
-    src: url(astro.ttf);
-  }
+  font-family: 'Astro';
+  src: url(astro.ttf);
+}
 @font-face {
-    font-family: 'Nasalization';
-    src: url(nasalization-rg.ttf);
+  font-family: 'Nasalization';
+  src: url(nasalization-rg.ttf);
+}
+*{
+  margin:0;
+  padding:0;
   }
-
-body{
-    background: url(../img/3D-HD-Colours.jpg);
+body html{
+  min-height: 100%;
 }
-/*navbar*/
-
+#main{
+  width:100%;
+  min-height:100%;
+  margin:0 auto;
+  margin-bottom: 80%;
+  position:relative;
+}
+.background{
+  background: url(../img/3D-HD-Colours.jpg);
+  opacity: 0.70;
+  width: 100%;
+  height: 100em;;
+  position: fixed;
+  z-index: -1;
+}
+/************************************************************navbar*****************************************************************************/
+.container-fluid-nav {
+width: 100%;
+}
 .search, h2{
-    font-family: 'Nasalization';
+  font-family: 'Nasalization';
 }
-/*accueil*/
-h1{
-    font-family: 'Astro', arial, serif;
-    font-size: 80px;
-    color: rgb(255, 255, 255);
-    width: auto;
-    height: 10%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    text-align: center;
+a:hover{
+  color: orangered;
+}
+/*navbar-digimeg*/
+.digimeg-nav-wrap {
+    position: relative;
+    margin-right: auto;
+    z-index: 300;
+}/*pour mobile*/
+@media only screen and (max-width: 480px)
+{
+    .digimeg-main-nav{
+        display: flex;
+        flex-direction: column;
+    }
+}
+.digimeg-nav-wrap .digimeg-main-nav {
+    display: block;
+    width: 100%;
+}
+
+.digimeg-nav-wrap .digimeg-main-nav li {
+    list-style-type: none;
+    display: inline;
+    float: left;
+}
+
+.digimeg-nav-wrap .digimeg-main-nav li a {
+    display: block;
+    padding: 25px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Nasalization';
+    color: white;
+    position: relative;
+}
+
+.digimeg-group:after {
+    content: '.';
+    visibility: hidden;
+    clear: both;
+    display: block;
+    line-height: 0px;
+}
+
+.digimeg-sub-nav {
+    position: relative;
+}
+.digimeg-sub-nav li {
+    display: block;
+    width: 100%;
+   
+}
+.digimeg-sub-nav>li {
+    position: absolute;
+    top: 0px;
+    display: none;
+}
+.digimeg-nav-item-content {
+    padding: 10px;
+    color: black;
+}
+.digimeg-nav-item-content a {
+    color: black;
+}
+/*navbar-nicemenu*/
+.nicemenu {
+    position: relative;
+    display: block;
+    height: auto;
+}
+.nicemenu * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nicemenu-item {
+    background-color: #343A40;
+    display: inline-block;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 10px;
+    z-index: 200;
+}
+.nicemenu-item h5 {
+    color: white;
+    font-weight: bold;
+}
+
+.nicemenu-item h6 {
+    color: black;
+    font-size: 16px;
+    line-height: 2em;
+    font-weight: bold;
+}
+
+.nicemenu-sub {
+    background-color: #FFDF64;
+    padding: 16px;
+    overflow: hidden;
+    color: #000;
+    width: 750px;
+    box-shadow: 5px 5px 5px;
+    z-index: 180;
+}
+
+.nicemenu-sub h5 {
+    font-size: 1.2em;
+}
+
+.w-3-1 {
+    position: relative;
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+}
+.w-3-1 a{
+    list-style-type: none;
+    color: #5D6B88;
+}
+/*pour mobile*/
+@media only screen and (max-width: 480px)
+{
+ .nicemenu-item .nicemenu-sub{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    }
+}
+/**************************************************accueil**************************************************************************************/
+.nameSite{
+  font-family: 'Astro', arial, serif;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  width: auto;
+  height: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  
+}
+@media only screen and (max-width: 480px)
+{
+  h1{
+    font-size: 60px;
+  }
+  .prez{
+    font-size: 18px;
+  }
 }
 .prez{
-    font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px ;
-    margin-top: 2%;
-    margin-bottom: 2%;
+  font-size: 20px;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px ;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
-/*card*/
+
+/*************************************************************card*****************************************************************************/
 h2{
-  margin: 3%;
-  margin-left: 30%;
+  max-height: auto;
+margin: 3%;
+margin-left: 30%;
 }
 h3{
-  font-size: 20px;
-  font-weight: bold;
+font-size: 20px;
+font-weight: bold;
 }
 .title-waiting{
-  margin-left : 15%;
+margin-left : 15%;
 }
 .card{
-  max-height: auto;
-  margin-left: 20px;
-  margin-bottom: 20px;
+max-height: auto;
+margin-left: 20px;
+margin-bottom: 20px;
 }
 
 img{
-  width: 80%;
-  margin-left: 10%;
-  height: auto;
-  object-fit: cover; 
+width: 80%;
+margin-left: 10%;
+height: auto;
+object-fit: cover; 
 }
 .card-footer h4{
-  font-size: 20px;
+font-size: 20px;
 }
 .card-footer a{
-  color: white;
-  margin-bottom: 5px;
+color: white;
+margin-bottom: 5px;
 }
-.card-footer a:hover{
-  color: orangered;
-}
+
 /*notation étoile*/
 #card-footer {
-  direction: rtl;
-  margin-left: 10%;
+direction: rtl;
+margin-left: 10%;
 }
 .card-footer i {
-  color:orange;
-  text-decoration: none;
-  font-size: 1em;
-  transition: color .4s;
+color:orange;
+text-decoration: none;
+font-size: 1em;
+transition: color .4s;
 }
-/*ancre flèche haut*/
+/**********************************************************************ancre retour haut**********************************************************/
 #scroll_to_top { 
-  position: fixed; 
-  width: 25px; 
-  height: 25px; 
-  bottom: 50px; 
-  right: 50px; 
+position: fixed; 
+width: 25px; 
+height: 25px; 
+bottom: 50px; 
+right: 50px; 
 } 
 /*footer*/
-.btn-footer{
-  background-color: #343A40;
+.footer{
+bottom:0;
+width: 100%;
+background-color: #343A40;
 }
 .btn{
-  margin-top: 5px;
-  margin-bottom: 5px;
+margin-top: 5px;
+margin-bottom: 5px;
 }
 
 #scroll_to_top img { 
-  width: 50px; 
+width: 50px; 
 }
-/*formulaires inscription et connection*/
+/************************************************formulaires inscription et connection**********************************************************/
 .first, .second{
-    width: 450px;
-    border-radius: 25px 25px 25px 25px;
-    background: rgba(255, 255, 255, 0.7);
-  }
-   label{
-    font-family: 'Nasalization';
-  }
-  .inscription{
-    background-color: #F50057;
-    border-radius: 50px;
-    text-align: center;
-    line-height: 40px;
-    font-family: 'Nasalization';
-    font-size: 22px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 40;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    transition:.2s ease-in;
-  
-  }
-  .identity{
-    background-color: rgb(236, 60, 29);
-    border-radius: 50px;
-    text-align: center;
-    line-height: 40px;
-    font-family: 'Nasalization';
-    font-size: 22px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 40;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    transition:.2s ease-in;
-  }
-  /*formulaire ajout d'avis*/
-  .addReview{
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 10px 10px 10px 10px;
-    margin-top: 20px;
-  }
-  
-  .textReview textarea{
-    vertical-align: top;
-    overflow: auto;
-    margin-bottom: 10px;
-  }
-  /*signale la validité ou non des champs concernés*/
-  input:invalid {
-    border: 1px dashed red;
-  }
-  
-  input:valid {
-    border: 1px solid green;
-  }
-  /*tchat*/
-  #waiting{
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px ;
-    margin: auto;
-    margin-top: 2%;
-  }
+  border-radius: 5px 5px 5px 5px;
+  background: rgba(255, 255, 255, 0.3);
+  margin-left: 100%;
+}
+.second{
+    min-height: 80%;
+}
+
+ label{
+  font-family: 'Nasalization';
+  width: 100%;
+}
+.inscription{
+  background-color: #F50057;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Nasalization';
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 40;
+  transition:.2s ease-in;
+  margin: auto;
+  margin-top: 10px;
+}
+.identity{
+  background-color: rgb(236, 60, 29);
+  border-radius:15px;
+  text-align: center;
+  line-height: 40px;
+  font-family: 'Nasalization';
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 40;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition:.2s ease-in;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/***********************************************************formulaire ajout d'avis***************************************************************/
+.addReview{
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 20px;
+}
+
+.textReview textarea{
+  vertical-align: top;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+                                                /*signale la validité ou non des champs concernés*/
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid green;
+}
+/******************************************************************tchat***************************************************************************/
+.tchat-waiting{
+  margin-bottom: 80%;
+}
+#waiting{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px ;
+  margin: auto;
+  margin-top: 2%;
+}
+

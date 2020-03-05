@@ -1,27 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/digimeg.css">
-  <link rel="stylesheet" href="assets/css/nice-menu.css">
-  <link rel="stylesheet" media="screen" type="text/css" title="Mon style" href="assets/css/style.css" />
-  <title>Say me</title>
-</head>
-<body>
-  <div class="background"></div>
-  <!--début de l'entête-->
-  <header>
-    <?php include 'nav.php' ?>
-    <h1 class="nameSite">Say Me</h1>
-  </header>
-  
-  <!--fin de l'entête-->
+<?php 
+require_once '../Views/includes/header.php'
+?>
+
   <!--mot d'accueil-->
   <p class="prez col-12 col-md-10 offset-1 mt-3">
     Bienvenue ! Partager votre expérience utilisateur avec toute la communauté sur tous les produits : Higth tech,
@@ -91,7 +71,6 @@
               Son compatible Dolby Atmos, Lecture de musique –
               formats supportés :MP3, M4A, 3GA, AAC, OGG, OGA, WAV, WMA, AMR, AWB, FLAC, MID, MIDI, XMF, MXMF, IMY,
               RTTTL, RTX, OTA, DFF, DSF, APE ; Localisation : GPS, GLONASS, Beidou, Galileo.
-          </p>
           </details>
         </div>
         <div class="card-footer">
@@ -139,7 +118,7 @@
       <!--card view-->
       <div class="card col-lg-4 offset-1 mr-3">
         <div class="card-header">
-          <h3 id="Samsung Galaxy S9 Plus">Samsung Galaxy S9 Plus</h3>
+          <h3 id="SamsungGalaxyS9Plus">Samsung Galaxy S9 Plus</h3>
         </div>
         <div class="card-body">
           <p class="card-text">Même si le S10 et bientôt le S20 sont sortis. Je ne souhaite pas changer de téléphone
@@ -159,7 +138,7 @@
       <!--card-->
       <div class="card col-lg-4 offset-1">
         <div class="card-header">
-          <h3 id="Samsung Galaxy S20 Ultra">Samsung Galaxy S20 Ultra 5G 128 Go Noir</h3>
+          <h3 id="SamsungGalaxyS20Ultra">Samsung Galaxy S20 Ultra 5G 128 Go Noir</h3>
         </div>
         <div class="card-body">
           <p class="card-text">Excellent. Je recommande. Comment dire ? Une révolution. Bon, elle coûte chère mais
@@ -180,6 +159,6 @@
     </div>
   </div>
   <div id="scroll_to_top">
-    <a href="#top"><img src="assets/img/bouton-top.png" alt="Retourner en haut" /></a>
+    <a href="#top"><img src="../assets/img/bouton-top.png" alt="Retourner en haut" /></a>
   </div>
-  <?php include 'footer.php' ?>
+  <?php include '../Views/includes/footer.php' ?>

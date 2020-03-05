@@ -1,4 +1,4 @@
-/*verification de formulaire*/
+/*verification de formulaire inscription*/
 $(function(){
     $('form').on('submit', function(event){
     event.preventDefault();
@@ -15,9 +15,9 @@ var checkFirstName = /^[A-Z][a-zéèçàïîêëôöûü]+([ -][A-Z][a-zéèçà
 console.log(checkFirstName);
 //Regex date anniversaire
 var checkBirthDate = /^([0-9]{4})-([0-9]{2})-([0-9]{2})$/.test(birthDate);
-//Regex Mail
 console.log(checkBirthDate);
-var checkMail = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+//Regex Mail
+var checkMail = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/.test(mail);
 
 if(!checkName.test(lastName)){//verif nom + message erreur
     isValid = false;
@@ -71,10 +71,13 @@ if(!isValid){
             $('#password').removeClass().addClass('alert alert-error').html('Mot de passe faible, essayez d’utiliser des chiffres et des lettres majuscules.');
         }
         return true;
-    })
+    });
+    
+});
 }
-}
-}
-}
+});
+});
+
+
 
     

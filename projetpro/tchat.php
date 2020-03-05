@@ -14,6 +14,8 @@
 </head>
 <body>
   <header>
+  
+  <div class="background"></div>
   <!--navbar tchat-->
   <nav class="navbar navbar-expand-lg sticky-top bg-dark">
         <a class="navbar-brand" href="index.php">Accueil</a>
@@ -27,5 +29,7 @@
           
   <!--fin navbar tchat-->
     <h1 class="nameSite">Say Me - Tchat</h1>
+    <div class="tchat-waiting">
 <p id="waiting">Encore un peu de patience. Vous pourrez prochainement tous discuter ensemble de tout et de rien ! <i class="fa fa-smile-o" aria-hidden="true"></i></p>
+</div>
 <?php include 'footer.php' ?>

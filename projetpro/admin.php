@@ -9,7 +9,6 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="assets/css/nicemenu.css">-->
   <link rel="stylesheet" href="assets/css/digimeg.css">
   <link rel="stylesheet" href="assets/css/nice-menu.css">
   <link rel="stylesheet" media="screen" type="text/css" title="Mon style" href="assets/css/style.css" />
@@ -17,12 +16,16 @@
 </head>
 
 <body>
+<div class="background"></div>
+  <!--début de l'entête-->
   <header>
     <?php include 'nav.php' ?>
     <h1 class="nameSite">Say Me</h1>
   </header>
+  <!--fin de l'entête-->
   <div class="container col-12 col-lg-4 d-flex justify-content-around">
     <div class="row">
+      <!--Les articles en attente de validation-->
       <h2 class="title-waiting">Les articles en attente</h2>
       <!--card-->
       <div class="card ">
@@ -56,32 +59,37 @@
           <a class="btn btn-info" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
           <a class="btn btn-success" href="addreview.php" role="button">Déposer un avis</a>
         </div>
+        <div class="validate-card">
+          <button type="submit" class="btn bg-danger ml-3"> Corriger</button>
+          <button type="submit" class="btn bg-warning"> Publier</button>
+        </div>
+      </div>
+      <!--fin card-article-->
+      <!--Les avis en attente-->
+      <h2 class="title-waiting">Les avis en attente</h2>
+      <!--card view-->
+      <div class="card ">
+        <div class="card-header">
+          <h3 id="Samsung Galaxy S9 Plus">Samsung Galaxy S9 Plus</h3>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Même si le S10 et bientôt le S20 sont sortis. Je ne souhaite pas changer de téléphone
+            car je suis très satisfaite de celui-ci.
+            Fildèle à Samsung depuis plusieurs années, je ne suis pas déçu encore une fois.</p>
+        </div>
+        <div class="card-footer" id="rating">
+          <h4>Note:
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i></h4>
+        </div>
         <button type="submit" class="btn bg-danger mt-2 mb-1"> Corriger</button>
         <button type="submit" class="btn bg-warning mb-2"> Publier</button>
       </div>
-      
-          <h2 class="title-waiting">Les avis en attente</h2>
-          <!--card view-->
-          <div class="card ">
-            <div class="card-header">
-              <h3 id="Samsung Galaxy S9 Plus">Samsung Galaxy S9 Plus</h3>
-            </div>
-            <div class="card-body">
-              <p class="card-text">Même si le S10 et bientôt le S20 sont sortis. Je ne souhaite pas changer de téléphone
-                car je suis très satisfaite de celui-ci.
-                Fildèle à Samsung depuis plusieurs années, je ne suis pas déçu encore une fois.</p>
-            </div>
-            <div class="card-footer" id="rating">
-              <h4>Note:
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i></h4>
-            </div>
-            <button type="submit" class="btn bg-danger mt-2 mb-1"> Corriger</button>
-            <button type="submit" class="btn bg-warning mb-2"> Publier</button>
-          </div>
-        </div>
-          <!--end card-->
-          <?php include 'footer.php' ?>
+    </div>
+  </div>
+  </div>
+  <!--end card-->
+  <?php include 'footer.php' ?>

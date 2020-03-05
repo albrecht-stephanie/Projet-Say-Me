@@ -1,12 +1,11 @@
 <?php
 define('USER', 'albrecht-stephanie');
-define('PASSWD', 'chaton');
+define('PASSWD', '');
 define('HOST', 'localhost');
-define('DB', 'viewsSM');
+define('DB', 'views');
 
 function connectDb() {
-    require_once 'params.php';
-
+    
     $dsn = 'mysql:dbname=' . DB . ';host=' . HOST;
     try {
         $db = new PDO($dsn, USER, PASSWD, ['PDO::ATTR_ERRMODE'=> 'PDO::ERRMODE_EXCEPTION']);

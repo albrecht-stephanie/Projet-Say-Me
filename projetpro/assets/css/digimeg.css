@@ -7,8 +7,14 @@
     position: relative;
     margin-right: auto;
     z-index: 300;
+}/*pour mobile*/
+@media only screen and (max-width: 480px)
+{
+    .digimeg-main-nav{
+        display: flex;
+        flex-direction: column;
+    }
 }
-
 .digimeg-nav-wrap .digimeg-main-nav {
     display: block;
     width: 100%;
@@ -30,9 +36,6 @@
     position: relative;
 }
 
-.digimeg-nav-wrap .digimeg-main-nav li a:hover {
-    color: orangered;
-}
 .digimeg-group:after {
     content: '.';
     visibility: hidden;
@@ -61,6 +64,3 @@
 .digimeg-nav-item-content a {
     color: black;
 }
-
-
-

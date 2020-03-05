@@ -4,7 +4,6 @@
     <div class="digimeg-nav-wrap">
       <ul class="digimeg-group digimeg-main-nav">
         <li><a href="index.php" data-subnav="define-subnav" class="digimeg-nav-item"> Accueil</a></li>
-        <!-- Active mark for this menu item -->
         <li><a href="#" data-subnav="Hight-Tech-subnav" class="digimeg-nav-item"> Hight-Tech <span
               class="digimeg-active-mark"></span> </a> </li>
         <li> <a href="#" data-subnav="Electro-Ménager-subnav" class="digimeg-nav-item"> Electro-Ménager <span
@@ -18,7 +17,7 @@
                 <h5>Smartphone</h5>
                 <div class="nicemenu-sub">
                   <div class="w-3-1">
-                    <h6>Samsung</h6>
+                    <h6><a href="#">Samsung</a></h6><!--Affiche tous les articles de la marque-->
                     <ul>
                       <li><a href="#">Samsung S9+</a></li>
                       <li><a href="#">Samsung Galaxy S20 Ultra</a></li>
@@ -202,13 +201,14 @@
         </li>
       </ul>
     </div>
-    <form class="form-inline my-lg-0">
-      <a class="btn btn-danger mr-2" href="inscription.php" title="Laisse un Avis et T'Chat !">
-        <i class="fa fa-user" aria-hidden="true"></i> Identifie-toi et Participe !</a>
-      <a class="btn btn-warning" href="tchat.php"><i class="fa fa-comments" aria-hidden="true"></i> T'Chat</a>
-      <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
-      <button class="search btn btn-outline-info  my-sm-0" type="submit">Rechercher</button>
-    </form>
+  
+<form class="form-inline my-lg-0">
+  <a class="btn btn-danger mr-2" href="inscription.php" title="Laisse un Avis et T'Chat !">
+    <i class="fa fa-user" aria-hidden="true"></i> Identifie-toi et Participe !</a>
+  <a class="btn btn-warning" href="tchat.php"><i class="fa fa-comments" aria-hidden="true"></i> T'Chat</a>
+  <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
+  <button class="search btn btn-outline-info  my-sm-0" type="submit">Rechercher</button>
+</form>
 </div>
 </nav>
 </div>
