@@ -4,6 +4,7 @@
 CREATE DATABASE IF NOT EXISTS `views` CHARACTER SET 'utf8';
 USE `views`;
 
+
 #------------------------------------------------------------
 # Table: categories
 #------------------------------------------------------------

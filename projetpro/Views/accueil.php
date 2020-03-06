@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once '../Views/includes/header.php'
 ?>
 
@@ -19,7 +20,7 @@ require_once '../Views/includes/header.php'
         </div>
         <div class="card-body">
           <button type="button" class="btn btn-link"><a href="https://www.samsung.com/fr/smartphones/galaxy-s9/" target="_blank" title="lien vers Samsung">
-            <img src="assets/img/samsung-galaxy-s9-plus.png" alt="Samsung S9+" >Samsung</a></button>
+            <img src="../assets/img/samsung-galaxy-s9-plus.png" alt="Samsung S9+" >Samsung</a></button>
           <p class="card-text">Smartphone débloqué Samsung S9 doté d'un écran infinity 6, 2" Quad HD+ ultra lumineux,
             d'un mode vidéo super ralenti de 960 images/secondes.<br></p>
           <details>
@@ -53,7 +54,7 @@ require_once '../Views/includes/header.php'
         </div>
         <div class="card-body">
         <button type="button" class="btn btn-link"><a href="https://www.frandroid.com/produits/smart/smartphones/661244-samsung-galaxy-s20-ultra" target="_blank"
-            title="lien vers frandroid"><img src="assets/img/samsung-galaxy-s20-ultra.jpg" alt="Samsung S20">Samsung</a></button>
+            title="lien vers frandroid"><img src="../assets/img/samsung-galaxy-s20-ultra.jpg" alt="Samsung S20">Samsung</a></button>
           <p>Ecran Infinity Quad HD+, 120 Hz, Dynamic AMOLED – 16M de couleurs, Gorilla Glass 6, Filtre de lumière
             bleue, Always On Display.
             <details>
@@ -85,7 +86,7 @@ require_once '../Views/includes/header.php'
         </div>
         <div class="card-body">
         <button type="button" class="btn btn-link"><a href="https://www.acer.com/ac/fr/FR/content/predator-model/NH.Q54EF.035" target="_blank" title="lien vers Samsung">
-            <img src="assets/img/pc-predator.jpg" alt="pc-predator">Acer</a></button>
+            <img src="../assets/img/pc-predator.jpg" alt="pc-predator">Acer</a></button>
           <p class="card-text">Compacte, solide, performant et favorable à l'upgrade, l'Acer Predator Helios
             PH315-52-54FD avance quelques arguments convaincants, <br></p>
           <details>

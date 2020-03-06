@@ -261,15 +261,14 @@ margin-bottom: 5px;
 width: 50px; 
 }
 /************************************************formulaires inscription et connection**********************************************************/
+.container-connect{
+  margin-bottom: 21.3%;
+  margin-left: 40%
+}
 .first, .second{
   border-radius: 5px 5px 5px 5px;
   background: rgba(255, 255, 255, 0.3);
-  margin-left: 100%;
 }
-.second{
-    min-height: 80%;
-}
-
  label{
   font-family: 'Nasalization';
   width: 100%;
@@ -304,6 +303,7 @@ width: 50px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 /***********************************************************formulaire ajout d'avis***************************************************************/
 .addReview{
   background: rgba(255, 255, 255, 0.7);

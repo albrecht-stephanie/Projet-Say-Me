@@ -1,19 +1,21 @@
 <?php
 require_once '../params.php';
+
 /**
  * Description of DataBase
  *
  * @author albrecht
  */
-class DataBase {
+
+class Database {
+
     protected $db;
    protected static $instance = null;
    
    public function __construct(){
        
    }
-       
-    public static function getInstance() {
+public static function getInstance() {
         if (is_null(self::$instance)) {
             $dsn = 'mysql:dbname=' . DB . ';host=' . HOST . ';charset=UTF8';
             $options = [
@@ -27,6 +29,4 @@ class DataBase {
         }
         return self::$instance;
     }
-
 }
-

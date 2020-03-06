@@ -1,6 +1,6 @@
 <?php
 define('USER', 'albrecht-stephanie');
-define('PASSWD', '');
+define('PASSWD', 'chaton');
 define('HOST', 'localhost');
 define('DB', 'views');
 

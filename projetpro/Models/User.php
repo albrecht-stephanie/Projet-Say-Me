@@ -81,17 +81,49 @@ class users {
         }
     }
     
-//    public function checkEmail() {
-//        $sql = 'SELECT COUNT(`id`) AS number_user FROM `users` WHERE `email` = :email';
-//        $req = $this->db->prepare($sql);
-//        $req->bindValue(':email', $this->email, PDO::PARAM_STR);
-//        $exist_user = false;
-//        if($req->execute()){
-//            $result = $req->fetchColumn(0);
-//            if(is_numeric($result) && $result > 0){
-//                $exist_user = true;
-//            }
-//        }
-//        return $exist_user;
-//    }
+    public function checkEmail() {
+        $sql = 'SELECT COUNT(`id`) AS number_user FROM `users` WHERE `email` = :email';
+        $req = $this->db->prepare($sql);
+        $req->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $exist_user = false;
+        if($req->execute()){
+            $result = $req->fetchColumn(0);
+            if(is_numeric($result) && $result > 0){
+                $exist_user = true;
+            }
+        }
+        return $exist_user;
+    }
+    
+    public function update() {
+        $sql = 'UPDATE `users` SET `lastname`= :lastname, `firstname`= :firstname, `email`= :email, `password` = :password  WHERE `id` = :id';
+        $sth = $this->db->prepare($sql);
+        $sth->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
+        $sth->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
+        $sth->bindValue(':email', $this->mail, PDO::PARAM_STR);
+        $sth->bindValue(':password', $this->mail, PDO::PARAM_STR);
+        $sth->bindValue(':id', $this->id, PDO::PARAM_INT);
+        if ($sth->execute()) {
+            return $this;
+        }
+        return false;
+    }
+    
+    public function updatepwd() {
+        $sql = 'UPDATE `users` SET `password` = :password WHERE `email = :email';
+        $sth = $this->db->prepare($sql);
+        $sth >bindValue(':password', $this->password, PDO::PARAM_STR);
+        if ($sth->execute()) {
+            return $this;
+        }
+        return false;
+    }
+    
+    public function delete() {
+       $sql = 'DELETE FROM `users` WHERE `id` = :id';
+      $sth = $this->db->prepare($sql);
+      $sth->bindValue(':id', $this->id, PDO::PARAM_INT);
+      return $sth->execute();
+    }
+    
 }

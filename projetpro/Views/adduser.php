@@ -4,11 +4,11 @@ require_once '../Views/includes/header.php'
 ?>
 
         <!--fin de l'entête-->
-            <?php if (isset($success)): ?>
+            <?php if (isset($success)){ ?>
         <div class="alert col-lg-3 text-center alert-success alert-dismissable" role="alert">
             <p>Le compte a bien été créer !</p>
         </div>
-    <?php endif; ?>
+            <?php } else { ?>
         <!--Début des Formulaires-->
         <div class="container d-flex flex-wrap align-content-around">
             
@@ -42,7 +42,7 @@ require_once '../Views/includes/header.php'
                 </div>
                 <div class="form-group md-form">
                     <label for="emailRegister">Email : </label>
-                    <input  autocomplete="false" name="email" type="text" class="form-control <?= (isset($isSubmit) && !isset($errors['email'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['email'])) ? 'is-invalid' : '' ?>" id="emailRegister" required>
+                    <input  autocomplete="false" name="email" type="email" class="form-control <?= (isset($isSubmit) && !isset($errors['email'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['email'])) ? 'is-invalid' : '' ?>" id="emailRegister" required>
                     <div class="invalid-feedback">
                         <?= $errors['email'] ?? '' ?>
                     </div>
@@ -66,16 +66,15 @@ require_once '../Views/includes/header.php'
                     <div class="form-check">
                         <input name="conditions" class="form-check-input <?= (isset($isSubmit) && !isset($errors['conditions'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['conditions'])) ? 'is-invalid' : '' ?>" type="checkbox" value="" id="conditions"
                             required>
-                        <label class="form-check-label" for="terms">Agree to terms and conditions</label>
+                        <label class="form-check-label" for="conditions">Agree to terms and conditions</label>
                     </div>
                     <div class="invalid-feedback mt-3 ml-0">
                     <?= $errors['conditions'] ?? '' ?>.
                     </div>
                 </div>
-                <button type="submit2" class="col-8 offset-2 btn bg-info mt-2"> S'inscrire</button>
-            
+                <button type="submit" class="col-8 offset-2 btn bg-info mt-2"> S'inscrire</button>
             </div>
         </div>
-    
+            <?php } ?>
         <!--fin des formulaires-->
         <?php include '../Views/includes/footer.php' ?>
