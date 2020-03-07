@@ -25,6 +25,10 @@ if (isset($success)) {
                 <label for="email"> Mail:</label>
                 <input type="email" id="mail" name="email" value="<?= $users->email ?>">
             </div>
+            <div class="form-group col">
+                <label for="password"> Mot de passe:</label>
+                <input type="password" id="password" name="password" value="<?= $users->password ?>">
+            </div>
             <button type="submit" class="btn btn-outline-primary float-right mt-4">Envoyer les modifications</button>
         </form>
     </div>   

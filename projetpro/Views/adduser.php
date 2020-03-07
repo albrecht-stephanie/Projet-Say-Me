@@ -1,6 +1,7 @@
 <?php
-require_once '../Controllers/adduserController.php';
-require_once '../Views/includes/header.php'
+//require_once '../Controllers/adduserController.php';
+require_once '../Views/includes/header.php';
+
 ?>
 
         <!--fin de l'entête-->
@@ -18,14 +19,14 @@ require_once '../Views/includes/header.php'
                 <div class="form-group">
                     <h2 class="identity">Inscris-toi <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h2>
                     <label for="firstname">Prénom : </label>
-                    <input  autocomplete="false" name="firstname" type="text" class="form-control <?= (isset($isSubmit) && !isset($errors['firstname'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['firstname'])) ? 'is-invalid' : '' ?>" id="firstname" required>
+                    <input  autocomplete="false" name="firstname" type="text" value="<?= $firstname;?>" class="form-control <?= (isset($isSubmit) && !isset($errors['firstname'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['firstname'])) ? 'is-invalid' : '' ?>" id="firstname" required>
                     <div class="invalid-feedback">
                     <?= $errors['firstname'] ?? '' ?>.
                     </div>
                 </div>
                 <div class="form-group md-form">
                     <label for="lastname">Nom : </label>
-                    <input  autocomplete="false" name="lastname" type="text" class="form-control <?= (isset($isSubmit) && !isset($errors['lastname'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['lastname'])) ? 'is-invalid' : '' ?>" id="lastname" required>
+                    <input  autocomplete="false" name="lastname" type="text"  value="<?= $lastname;?>" class="form-control <?= (isset($isSubmit) && !isset($errors['lastname'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['lastname'])) ? 'is-invalid' : '' ?>" id="lastname" required>
                     <div class="invalid-feedback">
                     <?= $errors['lastname'] ?? '' ?>.
                     </div>
@@ -42,7 +43,7 @@ require_once '../Views/includes/header.php'
                 </div>
                 <div class="form-group md-form">
                     <label for="emailRegister">Email : </label>
-                    <input  autocomplete="false" name="email" type="email" class="form-control <?= (isset($isSubmit) && !isset($errors['email'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['email'])) ? 'is-invalid' : '' ?>" id="emailRegister" required>
+                    <input  autocomplete="false" name="email" type="email"  value="<?= $email;?>" class="form-control <?= (isset($isSubmit) && !isset($errors['email'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['email'])) ? 'is-invalid' : '' ?>" id="emailRegister" required>
                     <div class="invalid-feedback">
                         <?= $errors['email'] ?? '' ?>
                     </div>
@@ -62,14 +63,13 @@ require_once '../Views/includes/header.php'
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input name="conditions" class="form-check-input <?= (isset($isSubmit) && !isset($errors['conditions'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['conditions'])) ? 'is-invalid' : '' ?>" type="checkbox" value="" id="conditions"
-                            required>
-                        <label class="form-check-label" for="conditions">Agree to terms and conditions</label>
-                    </div>
-                    <div class="invalid-feedback mt-3 ml-0">
-                    <?= $errors['conditions'] ?? '' ?>.
+                 
+                <div class="custom-control custom-checkbox">
+                    <input name="conditions"  type="checkbox" class="custom-control-input <?= (isset($isSubmit) && !isset($errors['conditions'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['conditions'])) ? 'is-invalid' : '' ?>"  value="" id="conditions" required>
+                    <label class="custom-control-label" for="conditions">Agree to terms and conditions</label>
+
+                    <div class="invalid-feedback mb-3 ml-0">
+                        <?= $errors['conditions'] ?? '' ?>.
                     </div>
                 </div>
                 <button type="submit" class="col-8 offset-2 btn bg-info mt-2"> S'inscrire</button>

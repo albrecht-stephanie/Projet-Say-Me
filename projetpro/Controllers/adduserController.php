@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
 $firstname = $lastname = $major = $email = $password = $password_confirmation = $conditions = '';
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $users->create();
             $success = true;
             $sleep = 4;
-            header('Refresh:' . $sleep . ';http://projetpro/Controllers/connexionController.php?id=' . $users->id);
+            header('Refresh:' . $sleep . ';http://'.$_SERVER['HTTP_HOST'].'/Controllers/connexionController.php?id=');
         } catch (PDOException $ex) {
             echo 'La création du compte a échouée !' . $ex->getMessage();
             die();

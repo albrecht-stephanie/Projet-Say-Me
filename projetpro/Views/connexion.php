@@ -9,20 +9,20 @@ require_once '../Views/includes/header.php';
                 <h2 class="identity">Connectes-toi <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></h2>
                 <div class="mail ml-3 mr-3">
                     <label for="email">Mail</label>
-                    <input type="email" id="mail" placeholder="Dupont.daniel@gmail.com" required>
+                    <input type="email" id="mail" name="email" placeholder="Dupont.daniel@gmail.com" required>
                     <?php if (isset($errors['login'])){ ?>
                     <span class="text-danger"><?= $errors['login'] ?></span>
                     <?php } ?>
                 </div>
                 <div class="password ml-3 mr-3 mb-3">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" required>
+                    <input type="password" id="password" name="password" required>
                     <?php if (isset($errors['password'])){ ?>
                     <span class="text-danger"><?= $errors['password'] ?></span>
                     <?php } ?>
                 </div>
                 <button type="submit" class="col-8 offset-2 btn bg-success mt-2"> Se connecter</button>
-                <a class="btn btn-warning col-8 offset-2" href="../Views/adduser.php"> Ou inscris-toi !</a>
+                <a class="btn btn-warning col-8 offset-2" href="../Controllers/adduserController.php"> Ou inscris-toi !</a>
             </div>
             <!--Début de la modal oublie mot de passe-->
             <div>
@@ -41,11 +41,11 @@ require_once '../Views/includes/header.php';
                             <form method="post" action="../Controllers/updatepwdController.php" novalidate="">
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">email:</label>
-                                    <input type="email" class="form-control" id="email">
+                                    <input type="email" class="form-control" id="new_email" name="new_email">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-form-label">Nouveau mot de passe:</label>
-                                    <input type="password" class="form-control" id="password">
+                                    <input type="password" class="form-control" id="new_password" name="new_password">
                                 </div>
                                 <div class="form-group">
                                     <label for="password_confirmation" class="col-form-label">Confirmation du mot de passe:</label>

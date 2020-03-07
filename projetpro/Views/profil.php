@@ -15,7 +15,7 @@ require_once '../Views/includes/header.php'
                     <li>Email:<?= $users->email ?></li>
                     <li>Mes avis: </li>
                 </ul>
-                <a href="../Views/updateprofil.php" class="btn btn-info">Modifier</a>
+                <a href="../Controllers/updateprofilController.php" class="btn btn-info">Modifier</a>
                 <a href="../Controllers/deleteprofil.php" class="btn btn-danger">Supprimer mon profil</a>
             </div>
         </div>

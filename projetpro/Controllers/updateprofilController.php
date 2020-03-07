@@ -11,7 +11,7 @@ $passwordRegex = '/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])?[\w!@#$%^&*
 $users = new users();
 $users->id = $id;
 //On vérifie si le formulaire de mise à jour a été posté (POST)
-if ($isSubmitted && count($errors) == 0) {
+if ($isSubmit && count($errors) == 0) {
     $users->firstname = $firstname;
     $users->lastname = $lastname;
     $users->mail = $mail;

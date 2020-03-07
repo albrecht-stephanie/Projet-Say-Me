@@ -1,15 +1,16 @@
 <?php
+session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
 $email = $password = '';
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING));
+   $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING));
+     
     if (empty($email) || !filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
         $errors['login'] = 'Le mail est invalide !';
     }
-    $password = trim($_POST['password']);
+    $password = trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));
     if (count($errors) == 0) {
         $users = new users();
         $users->email = $email;
@@ -19,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['auth']['login'] = true;
                 $_SESSION['auth']['id'] = $users->id;
                 $_SESSION['auth']['lastname'] = $users->lastname;
-                header('Location:../Views/accueil.php');
+                $_SESSION['auth']['firstname'] = $users->firstname;
+                header('Location:../Controllers/accueilController.php');
                 exit();
             } else {
                 $errors['login'] = 'l\'identifiant ou le mot de passe est incorrect !';

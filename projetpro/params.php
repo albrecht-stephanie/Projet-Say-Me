@@ -1,4 +1,9 @@
 <?php
+/*define('USER', 'eric');
+define('PASSWD', 'toor');
+define('HOST', 'localhost');
+define('DB', 'views');
+*/
 define('USER', 'albrecht-stephanie');
 define('PASSWD', 'chaton');
 define('HOST', 'localhost');

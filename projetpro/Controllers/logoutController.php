@@ -1,8 +1,8 @@
 <?php
-
-if(isset($_SESSION['auth'])){
+session_start();
+ 
     $_SESSION['auth'] = [];
     session_destroy();
-    header('Location:../Views/accueil.php');
+    header('Location:../Controllers/accueilController.php');
     exit();
-}
+ 

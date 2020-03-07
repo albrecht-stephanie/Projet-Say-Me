@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="digimeg-nav-wrap">
             <ul class="digimeg-group digimeg-main-nav">
-                <li><a href="../Views/accueil.php" data-subnav="define-subnav" class="digimeg-nav-item"> Accueil</a></li>
+                <li><a href="../Controllers/accueilController.php" data-subnav="define-subnav" class="digimeg-nav-item"> Accueil</a></li>
                 <li><a href="#" data-subnav="Hight-Tech-subnav" class="digimeg-nav-item"> Hight-Tech <span
                             class="digimeg-active-mark"></span> </a> </li>
                 <li><a href="#" data-subnav="Electro-Menager-subnav" class="digimeg-nav-item"> Electro-Ménager <span
@@ -209,8 +209,8 @@
                 <a class="btn btn-danger mr-2" href="../Controllers/connexionController.php" title="Laisse un Avis et T'Chat !">
                     <i class="fa fa-user" aria-hidden="true"></i> Connectes-toi et Participe !</a>
             <?php } else { ?>
-                <a  href="../Views/updateprofil.php" class="btn btn-danger">Bonjour <?= ucfirst(strip_tags($_SESSION['auth']['firstname'])) ?> </a>
-                <a href="../Controllers/logoutController.php" class="btn"><i class="fas fa-sign-out-alt">Déconnexion</i></a>
+                <a  href="../Controllers/profilController.php" class="btn btn-success mr-1">Bonjour <?= ucfirst(strip_tags($_SESSION['auth']['lastname'])) ?> </a>
+                <a href="../Controllers/logoutController.php" class="btn btn-danger mr-1"><i class="fas fa-sign-out-alt">Déconnexion</i></a>
             <?php } ?>
             <a class="btn btn-warning" href="tchat.php"><i class="fa fa-comments" aria-hidden="true"></i> T'Chat</a>
             <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
