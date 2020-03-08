@@ -13,19 +13,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = trim(filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING));
     if (count($errors) == 0) {
         $users = new users();
-        $users->email = $email;
+        
         try {
-            $users->getOne();
-            if (password_verify($password, $users->password)) {
-                $_SESSION['auth']['login'] = true;
-                $_SESSION['auth']['id'] = $users->id;
-                $_SESSION['auth']['lastname'] = $users->lastname;
-                $_SESSION['auth']['firstname'] = $users->firstname;
-                header('Location:../Controllers/accueilController.php');
-                exit();
-            } else {
-                $errors['login'] = 'l\'identifiant ou le mot de passe est incorrect !';
-            }
+                // vérification que l'identifiant mail existe
+                $users->email = $email;
+                if ($users->checkEmail()) {  
+                    $users->getOne();
+                    // controle du mot de passe, si ok, on charge le profil
+                    if (password_verify($password, $users->password)) {
+                        $_SESSION['auth']['login'] = true;
+                        $_SESSION['auth']['id'] = $users->id;
+                        $_SESSION['auth']['lastname'] = $users->lastname;
+                        $_SESSION['auth']['firstname'] = $users->firstname;
+                        header('Location:../Controllers/accueilController.php');
+                        exit();
+                    } else {
+                        $errors['login'] = 'l\'identifiant ou le mot de passe est incorrect !';
+                    }
+                } else {
+                    $errors['login'] = 'l\'identifiant ou le mot de passe est incorrect !';
+                }
         } catch (PDOException $ex) {
             $errors['login'] = 'Il y a eu un problème lors de la connexion à votre compte !';
         }

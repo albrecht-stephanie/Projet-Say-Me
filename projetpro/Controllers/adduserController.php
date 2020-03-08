@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $users->create();
             $success = true;
             $sleep = 4;
-            header('Refresh:' . $sleep . ';http://'.$_SERVER['HTTP_HOST'].'/Controllers/connexionController.php?id=');
+            header('Refresh:' . $sleep . ';http://'.$_SERVER['HTTP_HOST'].'/Controllers/connexionController.php');
         } catch (PDOException $ex) {
             echo 'La création du compte a échouée !' . $ex->getMessage();
             die();

@@ -7,22 +7,24 @@ $errors = [];
 $nameRegex = '/\w+/';
 $passwordRegex = '/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])?[\w!@#$%^&*]{8,}$/';
 
-//On crée un nouveau patient
+//Création d'un nouvel objet user
 $users = new users();
-$users->id = $id;
+// chargement de l'user en cours
+$users->id= $_SESSION['auth']['id'];
+
 //On vérifie si le formulaire de mise à jour a été posté (POST)
 if ($isSubmit && count($errors) == 0) {
-    $users->firstname = $firstname;
+    $users->firstname = 'ee';//$firstname;
     $users->lastname = $lastname;
     $users->mail = $mail;
-    $users->password = $password;
+    $users->password = $users->password;
     if (!$users->update()) {
         require_once '../Views/errors/503.php';
         exit();
     }
     $success = true;
     $sleep = 4;
-    header('Refresh:' . $sleep . ';http://projetpro/Controllers/updateprofilController.php?idPatient='. $users->id);
-}
+    header('Refresh:' . $sleep . ';http://'.$_SERVER['HTTP_HOST'].'/Controllers/connexionController.php');
+    }
 
 require_once '../Views/updateprofil.php';

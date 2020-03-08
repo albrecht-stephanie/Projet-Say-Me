@@ -13,12 +13,12 @@ if (isset($success)) {
         <form method="post" action="#">
             <div class="form-group col">
                 <label for="lastName">Nom</label>
-                <input name="lastname" type="text" id="lastName" class="form-control" placeholder="" value="<?= $users->lastname ?>">
+                <input name="lastname" type="text" id="lastname" class="form-control" placeholder="" value="<?= $lastname ?>">
                 <span class="invalid-feedback"><?= ($errors['lastname']) ?? '' ?></span>
             </div>
             <div class="form-group col">
                 <label for="firstName">Prénom</label>
-                <input name="firstname" type="text" id="firstName" class="form-control" placeholder="" value="<?= $users->firstname ?>">
+                <input name="firstname" type="text" id="firstname" class="form-control" placeholder="" value="<?= $firstname ?>">
                 <span class="invalid-feedback"><?= ($errors['firstname']) ?? '' ?></span>
             </div>
             <div class="form-group col">

@@ -72,7 +72,8 @@ class users {
 
         if ($req->execute()) {
             $users = $req->fetch(PDO::FETCH_OBJ);
-            $this->firsname = $users->firstname;
+            $this->id = $users->id;
+            $this->firstname = $users->firstname;
             $this->lastname = $users->lastname;
             $this->email = $users->email;
             $this->password = $users->password;
@@ -100,8 +101,8 @@ class users {
         $sth = $this->db->prepare($sql);
         $sth->bindValue(':lastname', $this->lastname, PDO::PARAM_STR);
         $sth->bindValue(':firstname', $this->firstname, PDO::PARAM_STR);
-        $sth->bindValue(':email', $this->mail, PDO::PARAM_STR);
-        $sth->bindValue(':password', $this->mail, PDO::PARAM_STR);
+        $sth->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $sth->bindValue(':password', $this->password, PDO::PARAM_STR);
         $sth->bindValue(':id', $this->id, PDO::PARAM_INT);
         if ($sth->execute()) {
             return $this;
@@ -110,7 +111,7 @@ class users {
     }
     
     public function updatepwd() {
-        $sql = 'UPDATE `users` SET `password` = :password WHERE `email = :email';
+        $sql = 'UPDATE `users` SET `password` = :password WHERE `email` = :email';
         $sth = $this->db->prepare($sql);
         $sth >bindValue(':password', $this->password, PDO::PARAM_STR);
         if ($sth->execute()) {
@@ -120,10 +121,13 @@ class users {
     }
     
     public function delete() {
-       $sql = 'DELETE FROM `users` WHERE `id` = :id';
-      $sth = $this->db->prepare($sql);
-      $sth->bindValue(':id', $this->id, PDO::PARAM_INT);
-      return $sth->execute();
+        $sql = 'DELETE FROM `users` WHERE `id` = :id';
+        $sth = $this->db->prepare($sql);
+        $sth->bindValue(':id', $this->id, PDO::PARAM_INT);
+        if ($sth->execute()) {
+            return $this;
+        }
+        return false;
     }
     
 }

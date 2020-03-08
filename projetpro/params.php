@@ -1,5 +1,6 @@
 <?php
-/*define('USER', 'eric');
+/*
+define('USER', 'eric');
 define('PASSWD', 'toor');
 define('HOST', 'localhost');
 define('DB', 'views');
