@@ -3,12 +3,12 @@
 define('USER', 'eric');
 define('PASSWD', 'toor');
 define('HOST', 'localhost');
-define('DB', 'views');
+define('DB', 'sayme');
 */
 define('USER', 'albrecht-stephanie');
 define('PASSWD', 'chaton');
 define('HOST', 'localhost');
-define('DB', 'views');
+define('DB', 'sayme');
 
 function connectDb() {
     

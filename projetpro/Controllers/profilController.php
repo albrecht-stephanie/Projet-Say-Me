@@ -34,7 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $errors['email'] = 'Le mail est invalide !';
     }
     // vérification de la disponniblité du mail, si il existe dans la base, on l'indique
-    $users->email = $email;
+    $users->email = $email;// si aucune variable de session n'existe, on renvoi vers la page pour se logguer
+    if (!isset($_SESSION['auth']['id'])){
+        header('Location: http://'.$_SERVER['HTTP_HOST'].'/Controllers/connexionController.php');
+    }
     if (!$users->checkEmail()) {
         $errors['email'] = 'Le mail existe déjà!';
     }    

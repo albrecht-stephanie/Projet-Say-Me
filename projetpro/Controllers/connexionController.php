@@ -2,6 +2,7 @@
 session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
+
 $email = $password = '';
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

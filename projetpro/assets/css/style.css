@@ -328,17 +328,25 @@ img {
 .first,
 .second {
     border-radius: 5px 5px 5px 5px;
-    background: rgba(255, 255, 255, 0.3);
+    border: solid rgb(210, 213, 216) 0.5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+}
+.second{
+    width: 60%;
 }
 
 label {
     font-family: 'Nasalization';
-    width: 100%;
+
+
+}
+input {
+
 }
 
 .inscription {
     background-color: #F50057;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
     line-height: 40px;
     font-family: 'Nasalization';
@@ -353,19 +361,20 @@ label {
 
 .identity {
     background-color: rgb(236, 60, 29);
-    border-radius: 15px;
+    border-radius: 5px;
+    width: 80%;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
     font-family: 'Nasalization';
     font-size: 22px;
     color: #fff;
     cursor: pointer;
     z-index: 40;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
     transition: .2s ease-in;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -387,11 +396,11 @@ label {
 /*signale la validité ou non des champs concernés*/
 
 input:invalid {
-    border: 2px dashed red;
+    border: 1px solid red;
 }
 
 input:valid {
-    border: 2px solid green;
+    border: 1px solid green;
 }
 
 input[type=checkbox] {

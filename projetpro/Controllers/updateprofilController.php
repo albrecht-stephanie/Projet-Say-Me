@@ -2,6 +2,7 @@
 session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
+
 $firstname = $lastname = $major = $email = $password = $password_confirmation = $conditions = '';
 $errors = [];
 $nameRegex = '/\w+/';

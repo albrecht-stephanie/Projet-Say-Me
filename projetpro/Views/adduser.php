@@ -1,8 +1,8 @@
 <?php
-//require_once '../Controllers/adduserController.php';
 require_once '../Views/includes/header.php';
 ?>
 <!--fin de l'entête-->
+<!--Alert creation compte réussi -->
 <?php if (isset($success)){ ?>
 <div class="container">
     <div class="row">
@@ -14,7 +14,6 @@ require_once '../Views/includes/header.php';
 <?php } else { ?>
 <!--Début des Formulaires-->
 <div class="container d-flex flex-wrap align-content-around">
-
     <!--Formulaire d'inscription-->
     <div class="row ">
         <form class="first col-lg-12" method="POST" action="#" novalidate="">

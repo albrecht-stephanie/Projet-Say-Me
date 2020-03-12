@@ -209,7 +209,7 @@
                 <a class="btn btn-danger mr-2" href="../Controllers/connexionController.php" title="Laisse un Avis et T'Chat !">
                     <i class="fa fa-user" aria-hidden="true"></i> Connectes-toi et Participe !</a>
             <?php } else { ?>
-                <a  href="../Controllers/profilController.php" class="btn btn-success mr-1">Bonjour <?= ucfirst(strip_tags($_SESSION['auth']['lastname'])) ?> </a>
+                <a  href="../Controllers/profilController.php" class="btn btn-success mr-1">Bonjour <?= ucfirst(strip_tags($_SESSION['auth']['firstname'])) ?> </a>
                 <a href="../Controllers/logoutController.php" class="btn btn-danger mr-1"><i class="fas fa-sign-out-alt">Déconnexion</i></a>
             <?php } ?>
             <a class="btn btn-warning" href="tchat.php"><i class="fa fa-comments" aria-hidden="true"></i> T'Chat</a>

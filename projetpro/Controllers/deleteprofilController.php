@@ -2,6 +2,7 @@
 session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
+
 $users = new users();
 
 $users->id = $_SESSION['auth']['id'];

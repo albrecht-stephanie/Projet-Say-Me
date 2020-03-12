@@ -2,6 +2,7 @@
 session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
+
 $firstname = $lastname = $major = $email = $password = $password_confirmation = $conditions = '';
 $errors = [];
 
@@ -40,7 +41,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($email) || !filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL)) {
         $errors['email'] = 'Le mail est invalide !';
     }
-
+    $users = new users();
+    $users->email = $email;
+    $exist_user = $users->checkEmail();
+    if ($exist_user == true) {
+    $errors['email'] = 'Ce mail existe déjà !';
+   }
+    
     $password = trim($_POST['password']);
     if (empty($password) || !preg_match($passwordRegex, $password)) {
         $errors['password'] = 'Le mot de passe doit comporter au moins 8 caractères !';
