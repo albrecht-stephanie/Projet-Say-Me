@@ -1,14 +1,19 @@
 <?php
 /*
-define('USER', 'eric');
-define('PASSWD', 'toor');
+define('USER', '*');
+define('PASSWD', '*');
 define('HOST', 'localhost');
-define('DB', 'sayme');
+define('DB', '*');
 */
-define('USER', 'albrecht-stephanie');
-define('PASSWD', 'chaton');
+define('USER', '*');
+define('PASSWD', '*');
 define('HOST', 'localhost');
-define('DB', 'sayme');
+define('DB', '*');
+
+/*define('USER', '*');
+define('PASSWD', '*');
+define('HOST', '*');
+define('DB', '*');*/
 
 function connectDb() {
     

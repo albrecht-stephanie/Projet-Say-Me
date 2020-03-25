@@ -199,7 +199,6 @@ a:hover {
     }
 }
 
-
 /**************************************************accueil**************************************************************************************/
 
 .nameSite {
@@ -225,12 +224,15 @@ a:hover {
 .prez {
     font-size: 20px;
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px;
+    border-radius: 5px 5px 5px 5px;
+    border: solid rgb(210, 213, 216) 0.5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
     margin-top: 2%;
     margin-bottom: 2%;
 }
-
+.smile{
+    color: yellow;
+}
 
 /*************************************************************card*****************************************************************************/
 
@@ -250,14 +252,19 @@ h3 {
 }
 
 .card {
-    max-height: auto;
-    margin-left: 20px;
+    max-height: 60%;
+    max-width: 30%;
     margin-bottom: 20px;
-}
+    margin-left: 5px;
 
+}
+.modaldesc{
+    margin-left : 30%;
+}
 img {
-    width: 80%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 10px;
     height: auto;
     object-fit: cover;
 }
@@ -325,11 +332,13 @@ img {
     margin-left: 40%
 }
 
-.first,
-.second {
+.first, .second {
     border-radius: 5px 5px 5px 5px;
     border: solid rgb(210, 213, 216) 0.5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+}
+.first{
+    width: 80%;
 }
 .second{
     width: 60%;
@@ -338,9 +347,6 @@ img {
 label {
     font-family: 'Nasalization';
 
-
-}
-input {
 
 }
 

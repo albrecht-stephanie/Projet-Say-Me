@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $_SESSION['auth']['id'] = $users->id;
                         $_SESSION['auth']['lastname'] = $users->lastname;
                         $_SESSION['auth']['firstname'] = $users->firstname;
-                        header('Location:../Controllers/accueilController.php');
+                        header('Location:../Controllers/indexController.php');
                         exit();
                     } else {
                         $errors['login'] = 'l\'identifiant ou le mot de passe est incorrect !';
