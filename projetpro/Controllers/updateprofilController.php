@@ -15,7 +15,7 @@ $users->id= $_SESSION['auth']['id'];
 
 //On vérifie si le formulaire de mise à jour a été posté (POST)
 if ($isSubmit && count($errors) == 0) {
-    $users->firstname = 'ee';//$firstname;
+    $users->firstname = $firstname;
     $users->lastname = $lastname;
     $users->mail = $mail;
     $users->password = $users->password;

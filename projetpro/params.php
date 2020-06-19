@@ -1,19 +1,19 @@
 <?php
 /*
-define('USER', '*');
-define('PASSWD', '*');
+define('USER', 'eric');
+define('PASSWD', 'toor');
 define('HOST', 'localhost');
-define('DB', '*');
+define('DB', 'sayme');
 */
-define('USER', '*');
-define('PASSWD', '*');
+define('USER', 'albrecht-stephanie');
+define('PASSWD', 'chaton240581');
 define('HOST', 'localhost');
-define('DB', '*');
+define('DB', 'sayme');
 
-/*define('USER', '*');
-define('PASSWD', '*');
-define('HOST', '*');
-define('DB', '*');*/
+/*define('USER', 'c9am_stephaniea');
+define('PASSWD', 'evwpdLSQB@22F');
+define('HOST', '54.37.71.121');
+define('DB', 'c26sayme');*/
 
 function connectDb() {
     

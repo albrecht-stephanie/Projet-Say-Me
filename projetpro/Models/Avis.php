@@ -47,14 +47,14 @@ class View {
         $this->title = $_title;
         $this->texte = $_texte;
         $this->note = $_note;
-        $this->publishDAte= $_publishDate;
+        $this->publishDate= $_publishDate;
         $this->id_users = $_id_users;
         $this->id_articles = $_id_articles;
         $this->db = Database::getInstance();
     }
     
     public function create() {
-        $sql = 'INSERT INTO `views`(`title`,`texte,`note`,`publishDate`, `id_users`, `id_articles`) VALUES (:title, :texte, :note, :publishDate, :id_users, :id_articles)';
+        $sql = 'INSERT INTO `views`(`title`,`texte`,`note`,`publishDate`, `id_users`, `id_articles`) VALUES (:title, :texte, :note, :publishDate, :id_users, :id_articles)';
         $req = $this->db->prepare($sql);
         $req->bindValue('::title', $this->title, PDO::PARAM_STR);
         $req->bindValue(':texte', $this->texte, PDO::PARAM_STR);
@@ -67,17 +67,16 @@ class View {
     }
     
     public function getAllOneArticle() {
-        $sql = 'SELECT `id`,`name`,`text`,`note`,DATE_FORMAT(`dateHour`, \'%d.%m.%Y %H:%i\') `publishDate` FROM `views` WHERE `id` = :id_articles';
+        $sql = 'SELECT `id`,`name`,`texte`,`note`,DATE_FORMAT(`publishDate`, \'%d.%m.%Y %H:%i\') AS `publishDate` FROM `views` WHERE `id_articles` = :id_articles';
         $req = $this->db->prepare($sql);
-        $req->bindValue(':id', $this->id, PDO::PARAM_INT);
-        $req->bindValue(':email', $this->email, PDO::PARAM_STR);
+        $req->bindValue(':id_articles', $this->id_articles, PDO::PARAM_INT);
 
         if ($req->execute()) {
-            $user = $req->fetch(PDO::FETCH_OBJ);
-            $this->firsname = $user->firstname;
-            $this->lastname = $user->lastname;
-            $this->email = $user->email;
-            $this->password = $user->password;
+            $views = $req->fetch(PDO::FETCH_OBJ);
+            $this->name = $views->name;
+            $this->texte = $views->texte;
+            $this->note = $views->note;
+            $this->publishDate = $views->publishDate;
             return $this;
         }
     }

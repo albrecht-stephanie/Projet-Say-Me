@@ -2,26 +2,26 @@
 require_once '../Views/includes/header.php';
 if (isset($success)) {
 ?>
-<!--<h2>Tous les articles  // $categorie['id_catrgories']?></h2>-->
+<!--<h2> //$article['name']></h2>-->
 <div class="container">
   <div class="row d-flex justify-content-around">
-    <?php //boucle permettant d'afficher la requête SQL : class Article, public function getcategorie$categorie()
-        
-       foreach($CatList as $categorie){
-                            ?>
+    <?php 
+    
+    
 
+     ?>
     <!--card-->
     <div class="card">
       <div class="card-header">
-        <h3><?= $categorie['name']?></h3>
+        <h3><?= $oneArticle->name ?></h3>
       </div>
       <div class="card-body">
-        <img src="../assets/img/articles/<?= $categorie['image']?>" alt="<?= $categorie['name']?>">
-        <p class="card-text"><?= $categorie['startdescrib']?><br></p>
+        <img src="../assets/img/articles/<?= $oneArticle->image ?>" alt="<?= $oneArticle->name ?>">
+        <p class="card-text"><?= $oneArticle->startdescrib ?><br></p>
         
         <!-- bouton ouvrant la modal des caractérisques-->
         <button type="button" class="btn modaldesc btn-primary" data-toggle="modal"
-          data-target="#A<?= $categorie['id']?>">Lire Plus...</button>
+          data-target="#A"<?= $oneArticle->id ?>>Lire Plus...</button>
         <!--fin bouton modal-->
       </div>
       <div class="card-footer">
@@ -29,7 +29,7 @@ if (isset($success)) {
         <a class="btn btn-success" href="addreview.php" role="button">Déposer un avis</a>
 
         <!-- Début de la Modal -->
-          <div class="modal fade" id="A<?= $categorie['id']?>">
+          <div class="modal fade" id="A"<?= $oneArticle->startdescrib ?>>
             <div class="modal-dialog modal-dialog-scrollable">
               <div class="modal-content">
                 <!-- Modal Header -->
@@ -39,9 +39,9 @@ if (isset($success)) {
                 </div>
                 <!-- Modal body -->
                 <div class="modal-body">
-                  <p><?= $categorie['describ']?>
+                  <p><?= $oneArticle->describ?>
                     <br>
-                    Date de publication : <?= $categorie['publishDate']?>
+                    Date de publication : <?= $oneArticle->publishDate?>
                   </p>
                 </div>
                 <!-- Modal footer -->
@@ -53,14 +53,13 @@ if (isset($success)) {
           </div>
         </div>
       </div>
-    <?php } 
-    ?>
   </div>
 </div>
 <!--end card article-->
 <?php
+
 }
 else {
   $error;
 }
-include '../Views/includes/footer.php' ?>
+ include '../Views/includes/footer.php' ?>

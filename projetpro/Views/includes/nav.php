@@ -16,7 +16,7 @@
                             <h5><a href="../Controllers/categorieController.php?id_categories=1" id_categories ="1">Smartphone</a></h5><!--Affiche tous les articles de la catégorie-->
                             <div class="nicemenu-sub">
                                 <div class="w-3-1">
-                                    <h6><a href="../Controllers/marqueController.php?id_marques=" id_marques ="1">Samsung</a></h6><!--Affiche tous les articles de la marque-->
+                                    <h6><a href="../Controllers/marqueController.php?id_marques=1" id_marques ="1">Samsung</a></h6><!--Affiche tous les articles de la marque-->
                                     <ul>
                                         <li><a href="../Controllers/articleController.php?id=1" id = "1" >Samsung S9+</a></li>
                                         <li><a href="../Controllers/articleController.php?id=2" id = "2">Samsung Galaxy S20 Ultra</a></li>

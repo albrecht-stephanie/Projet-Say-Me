@@ -31,9 +31,9 @@ require_once '../Views/includes/header.php';
       </div>
       <div class="card-footer">
         <a class="btn btn-info" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
-        <a class="btn btn-success" href="addreview.php" role="button">Déposer un avis</a>
+        <a class="btn btn-success" href="addreviewController.php" role="button">Déposer un avis</a>
 
-        <!-- Début de la Modal -->
+        <!-- Début de la Modal Description -->
           <div class="modal fade" id="A<?= $plublish['id']?>">
             <div class="modal-dialog modal-dialog-scrollable">
               <div class="modal-content">
