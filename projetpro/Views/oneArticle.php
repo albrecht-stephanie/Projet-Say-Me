@@ -5,11 +5,6 @@ if (isset($success)) {
 <!--<h2> //$article['name']></h2>-->
 <div class="container">
   <div class="row d-flex justify-content-around">
-    <?php 
-    
-    
-
-     ?>
     <!--card-->
     <div class="card">
       <div class="card-header">
@@ -25,8 +20,8 @@ if (isset($success)) {
         <!--fin bouton modal-->
       </div>
       <div class="card-footer">
-        <a class="btn btn-info" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
-        <a class="btn btn-success" href="../Controllers/addreviewsController.php" role="button">Déposer un avis</a>
+        <a class="btn btn-info ml-4 mr-4" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
+        <a class="btn btn-success ml-4" href="../Controllers/addreviewsController.php" role="button">Déposer un avis</a>
 
         <!-- Début de la Modal -->
           <div class="modal fade" id="A"<?= $oneArticle->startdescrib ?>>

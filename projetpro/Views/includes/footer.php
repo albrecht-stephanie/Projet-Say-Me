@@ -3,9 +3,7 @@
   <a href="#top"><img src="../assets/img/bouton-top.png" alt="Retourner en haut" /></a>
 </div>
   <div class="footer d-flex justify-content-center ">
-    <a class="btn btn-info mr-2" href="legalNotice" title="legalNotice">Mentions Légales</a>
-    <!--<a class="btn btn-success" href="inscription.php" title="administrators">Administrateurs</a>-->
-    <a class="btn btn-success" href="admin.php" title="administrators">Administrateurs</a>
+    <a class="btn btn-info mr-2 active" href="assets/Mentions légales et politique de confidentialité.pdf" title="legalNotice" role="button" aria-pressed="true" target="_blank">Mentions Légales</a>
   </div>
 </footer>  
 

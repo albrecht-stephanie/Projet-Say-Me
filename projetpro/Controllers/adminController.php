@@ -1,20 +1,27 @@
 <?php
 session_start();
+// protection de la page par la session auth
+if($_SESSION['auth']['admin'] != 3){
+    header('Location: ../Controllers/accueilController.php');
+    exit();
+ }
 
-if($id_catuser == 3 AND count($errors) == 0) {
-    header('Location:../Controllers/accueilController.php');
- 
-}
+require_once '../Models/User.php';
 require_once '../Models/Avis.php';
 require_once '../Models/DataBase.php';
+
+//on vérifie que l'utilisateur a les droits d'administrateur
+
+$view = new View();
+
+//$user= $users->id_catusers;
+// protection de la page par la session auth
 
  $title = $textView= $note = $publishDate = '';
  $errors = [];
 
  $textRegex = '/\w+/';
  $noteRegex = '/d{2}\/\d{2}/';
-
-
 
 //On vérifie si le formulaire de mise à jour a été posté (POST)
 if (count($errors) == 0) {

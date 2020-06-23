@@ -96,16 +96,6 @@ class users {
         return $exist_user;
     }
     
-    public function admin() {
-        $sql = 'SELECT `email` FROM `users` WHERE `id_catusers` = 3';
-        $req = $this->db->prepare($sql);
-        $req->bindValue(3, $this->id_catusers, PDO::PARAM_INT);
-        if ($req->execute()) {
-            return $this;
-        }
-        return false;
-    }
-
     public function update() {
         $sql = 'UPDATE `users` SET `lastname`= :lastname, `firstname`= :firstname, `email`= :email, `password` = :password  WHERE `id` = :id';
         $sth = $this->db->prepare($sql);
