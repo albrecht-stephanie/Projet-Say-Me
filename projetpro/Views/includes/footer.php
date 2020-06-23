@@ -10,10 +10,12 @@
 </footer>  
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/digimeg.js"></script>
 <script src="../assets/js/jquery.nicemenu.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();

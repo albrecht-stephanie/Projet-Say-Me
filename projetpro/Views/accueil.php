@@ -1,22 +1,21 @@
 <?php 
 require_once '../Views/includes/header.php';
-?>
+?><div class="container-fluid">
+ 
+<div class='mainPage'>
 <!--mot d'accueil-->
-<p class="prez col-12 col-md-10 offset-1 mt-3">
-  Bienvenue ! Partagez votre expérience utilisateur avec toute la communauté sur tous les produits : Higth tech,
-  Electro-ménager, ...
-  Essayons simplement d'être constructif. <i class="smile fa fa-smile-o" aria-hidden="true"></i></p>
+<p class="prez mt-3">
+  Bienvenue ! Partagez votre expérience utilisateur avec toute la communauté sur tous les produits.</p>
 <!-- card article-->
 <h2>Les derniers articles publiés</h2>
-<div class="container">
-  <div class="row d-flex justify-content-around">
+ <div class="row d-flex justify-content-around col-lg-10 offset-1">
     <?php //boucle permettant d'afficher la requête SQL : class Article, public function threeLastPublish()
       $lastPublish= $article->threeLastPublish();   
         foreach ($lastPublish as $plublish){
                             ?>
 
     <!--card-->
-    <div class="card">
+    <div class="card " >
       <div class="card-header">
         <h3><?= $plublish['name']?></h3>
       </div>
@@ -30,8 +29,8 @@ require_once '../Views/includes/header.php';
         <!--fin bouton modal-->
       </div>
       <div class="card-footer">
-        <a class="btn btn-info" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
-        <a class="btn btn-success" href="addreviewController.php" role="button">Déposer un avis</a>
+        <a class="btn btn-info ml-4 mr-4" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
+        <a class="btn btn-success ml-4" href="addreviewsController.php" role="button">Déposer un avis</a><!--verifier authentification avant ouvrir page ajout avis-->
 
         <!-- Début de la Modal Description -->
           <div class="modal fade" id="A<?= $plublish['id']?>">
@@ -117,5 +116,5 @@ require_once '../Views/includes/header.php';
     <!--end card view-->
   </div>
 </div>
-
+        </div>
 <?php include '../Views/includes/footer.php' ?>

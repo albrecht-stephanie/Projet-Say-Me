@@ -6,7 +6,7 @@ if (isset($success)) {
     <p class="alert alert-success">Le profil du patient a été modifié avec succès!</p>
 <?php } ?>
 <div class="row">
-    <div class="card col-sm-8 offset-2 bg-light">
+    <div class="card bg-light">
         <div class="card-header font-weight-bold bg-info">
             <h2>Modifier mon profil</h2>
         </div>

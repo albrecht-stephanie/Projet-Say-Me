@@ -1,6 +1,6 @@
 <!--Début NavBar-->
 <div class="container-fluid-nav">
-    <nav class="navbar navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top ">
         <div class="digimeg-nav-wrap">
             <ul class="digimeg-group digimeg-main-nav">
                 <li><a href="../Controllers/accueilController.php" data-subnav="define-subnav" class="digimeg-nav-item"> Accueil</a></li>

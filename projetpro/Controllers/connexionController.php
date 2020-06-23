@@ -2,7 +2,7 @@
 session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
-
+$id_catuser = '0';
 $email = $password = '';
 $errors = [];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $_SESSION['auth']['id'] = $users->id;
                         $_SESSION['auth']['lastname'] = $users->lastname;
                         $_SESSION['auth']['firstname'] = $users->firstname;
-                        header('Location:../Controllers/indexController.php');
+                        header('Location:../Controllers/accueilController.php');
                         exit();
                     } else {
                         $errors['login'] = 'l\'identifiant ou le mot de passe est incorrect !';
@@ -39,4 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
+
+
+
 require_once '../Views/connexion.php';
