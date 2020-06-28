@@ -56,7 +56,6 @@ class Article {
     } 
     public function getOneById() {
         //Le code affichant un article selon son ID
-        
         $sql = 'SELECT `id`,`name`,`image`,`startdescrib`, `describ`, `publishDate` FROM `articles` WHERE `id` = '. $this->id;
         $req = $this->db->prepare($sql);
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
@@ -71,7 +70,6 @@ class Article {
                 
                 return $this;
             }
-            
         }
     }
     
@@ -104,6 +102,7 @@ class Article {
             
         }
     }
+    
     public function threeLastPublish(){
         //Le code sélectionnant les 3 dernier articles enregistrés
         $sql = 'SELECT `id`,`name`,`image`,`startdescrib`, `describ`, `publishDate` FROM `articles` WHERE `publishDate` ORDER BY `id` DESC LIMIT 3 ';

@@ -1,14 +1,8 @@
 <?php
-
 session_start();
-// protection de la page par la session auth
-/*if((!isset($_SESSION['auth']['login'])) || ($_SESSION['auth']['login'] != 3)){
-    header('Location: ../Controllers/connexionController.php');
-    exit();
- }
-*/
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
+
 $id_catuser = '0';
 $email = $password = '';
 $errors = [];
@@ -50,4 +44,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 
-require_once '../Views/connexion.php';
+require_once '../Views/connexionAdmin.php';

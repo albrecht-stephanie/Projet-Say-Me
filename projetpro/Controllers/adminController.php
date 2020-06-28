@@ -17,7 +17,7 @@ $view = new View();
 //$user= $users->id_catusers;
 // protection de la page par la session auth
 
- $title = $textView= $note = $publishDate = '';
+ $title = $textView = $note = $publishDate = '';
  $errors = [];
 
  $textRegex = '/\w+/';

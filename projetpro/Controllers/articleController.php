@@ -11,15 +11,9 @@ require_once '../Models/DataBase.php';
        
 $oneArticle = new Article();
 
-
 $oneArticle->id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 $oneArticle = $oneArticle-> getOneById();
 
-//if (!$oneArticle->getOneById()){
-//$error = 'Cette page pour cette article n\'existe pas encore';
-//   $sleep = 3;
- // header('Refresh:'. $sleep .';http://'.$_SERVER['HTTP_HOST'].'/Controllers/accueilController.php');
-//}
 $success = true;
 require_once '../Views/oneArticle.php';

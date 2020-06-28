@@ -1,3 +1,4 @@
+/***********************************************************import police******************************************************************************/
 @font-face {
     font-family: 'Astro';
     src: url(astro.ttf);
@@ -8,6 +9,7 @@
     src: url(nasalization-rg.ttf);
 }
 
+/************************************************************body/html**************************************************************************************/
 * {
     margin: 0;
     padding: 0;
@@ -64,6 +66,9 @@ body html {
 }
 
 .search,
+.btnConnect,
+.btnUser,
+.btnOut,
 h2 {
     font-family: 'Nasalization';
 }
@@ -71,7 +76,6 @@ h2 {
 a:hover {
     color: orangered;
 }
-
 
 /*navbar-digimeg*/
 
@@ -81,7 +85,6 @@ a:hover {
     z-index: 300;
     
 }
-
 
 /*pour mobile*/
 
@@ -95,8 +98,6 @@ a:hover {
 .digimeg-nav-wrap .digimeg-main-nav {
     display: block;
     width: 100%;
-   
-    
 }
 
 .digimeg-nav-wrap .digimeg-main-nav li {
@@ -104,13 +105,13 @@ a:hover {
     display: inline;
     float: left;
 }
+
 #Hight-Tech-subnav{
     box-shadow: 2px 2px 5px black;
     background-color: #fff;
     margin-top: 10px;
 }
 .digimeg-nav-wrap .digimeg-main-nav li a {
-    
     display: block;
     padding-left: 25px;
     padding-top: 5px;
@@ -122,24 +123,20 @@ a:hover {
 }
 
 .digimeg-group:after {
-    
     content: '.';
     visibility: hidden;
     clear: both;
     display: block;
     line-height: 0px;
-        
 }
 
 .digimeg-sub-nav {
     position: relative;
-    
 }
 
 .digimeg-sub-nav li {
     list-style-type: none;
     display: block;
-    
 }
 
 .digimeg-sub-nav>li {
@@ -160,7 +157,6 @@ a:hover {
 
 /*navbar-nicemenu*/
  
-
 .nicemenu {
     position: relative;
     display: block;
@@ -232,15 +228,16 @@ a:hover {
 }
 
 
-/*pour mobile
+/*pour mobile*/
 
 @media only screen and (max-width: 480px) {
-    .nicemenu-item .nicemenu-sub {
+    .nicemenu-item,
+    .nicemenu-sub {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
     }
-}*/
+}
 
 /**************************************************accueil**************************************************************************************/
 
@@ -374,30 +371,16 @@ img {
 
 
 /************************************************formulaires inscription et connection**********************************************************/
-
-.container-connect {
-    margin-bottom: 21.3%;
-    margin-left: 40%
-}
-
 .first, .second {
     background-color: #fff;
     border-radius: 5px 5px 5px 5px;
     border: solid rgb(210, 213, 216) 0.5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
 }
-.first{
-    width: 80%;
-}
-.second{
-    width: 80%;
-    height: 80%;
-}
+
 
 label {
     font-family: 'Nasalization';
-
-
 }
 
 .inscription {
@@ -416,29 +399,47 @@ label {
 }
 
 .identity {
-    background-color: rgb(236, 60, 29);
+    background-color: #C82333;
     border-radius: 5px;
-    width: 80%;
+    width: 40%;
     text-align: center;
     line-height: 35px;
     font-family: 'Nasalization';
-    font-size: 22px;
+    font-size: 24px;
     color: #fff;
     cursor: pointer;
     z-index: 40;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
-    transition: .2s ease-in;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
+   
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
+.admin{
+    background-color: #C82333;
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Nasalization';
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 40;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.30);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    } 
+
 
 
 /***********************************************************formulaire ajout d'avis***************************************************************/
-
-.addReview {
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 10px 10px 10px 10px;
+.newView{
+    color:#fff;
+}
+.formView {
+    background: #fff;
+    border-radius: 5px 5px 5px 5px;
     margin-top: 20px;
 }
 
@@ -447,7 +448,6 @@ label {
     overflow: auto;
     margin-bottom: 10px;
 }
-
 
 /*signale la validité ou non des champs concernés*/
 
@@ -462,7 +462,15 @@ input:valid {
 input[type=checkbox] {
     color: #fff;
 }
+/*****************************************************************formulaire contation du profil*****************************************************/
+.readProfil{
+    background-color: #fff;
+    border-radius: 5px 5px 5px 5px;
+}
 
+.titleReadProfil{
+    color: #fff;
+}
 
 /******************************************************************tchat***************************************************************************/
 

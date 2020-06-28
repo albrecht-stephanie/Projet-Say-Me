@@ -2,6 +2,7 @@
 session_start();
 require_once '../Models/User.php';
 require_once '../Models/DataBase.php';
+
 $id_catuser = '0';
 $email = $password = '';
 $errors = [];

@@ -2,10 +2,11 @@
 require_once '../Views/includes/header.php';
 if (isset($success)) {
 ?>
-<!--<h2>Tous les articles  // $categorie['id_catrgories']?></h2>-->
+
 <div class="container">
   <div class="row d-flex justify-content-around">
-    <?php //boucle permettant d'afficher la requête SQL : class Article, public function getcategorie$categorie()
+<!--boucle permettant d'afficher la requête SQL : class Article, public function getcategorie$categorie-->
+    <?php
         
        foreach($CatList as $categorie){
                             ?>
@@ -25,8 +26,8 @@ if (isset($success)) {
         <!--fin bouton modal-->
       </div>
       <div class="card-footer">
-        <a class="btn btn-info" href="#Samsung Galaxy S9 Plus" title="views">Voir les avis</a>
-        <a class="btn btn-success" href="addreview.php" role="button">Déposer un avis</a>
+        <a class="btn btn-info" href="viewsController.php?article=?<?= $marque['id'] ?>" title="views">Voir les avis</a>
+        <a class="btn btn-success" href="../Controllers/addreviewsController.php?article=<?= $categorie['id'] ?>" role="button">Déposer un avis</a>
 
         <!-- Début de la Modal -->
           <div class="modal fade" id="A<?= $categorie['id']?>">

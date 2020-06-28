@@ -3,7 +3,8 @@
   <a href="#top"><img src="../assets/img/bouton-top.png" alt="Retourner en haut" /></a>
 </div>
   <div class="footer d-flex justify-content-center ">
-    <a class="btn btn-info mr-2 active" href="assets/Mentions légales et politique de confidentialité.pdf" title="legalNotice" role="button" aria-pressed="true" target="_blank">Mentions Légales</a>
+    <a class="btn btn-outline-info mr-2 active" href="assets/Mentions légales et politique de confidentialité.pdf" title="legalNotice" role="button" aria-pressed="true" target="_blank">Mentions Légales</a>
+    <a class="btn btn-outline-success mr-2 active" href="assets/CGU - Conditions générales d'utilisation.pdf" title="legalNotice" role="button" aria-pressed="true" target="_blank">CGU</a>
   </div>
 </footer>  
 

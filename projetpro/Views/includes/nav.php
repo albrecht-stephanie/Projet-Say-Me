@@ -190,16 +190,14 @@
             </ul>
         </div>
         <form class="form-inline my-lg-0">
-            <?php if (!isset($_SESSION['auth']['login'])) { ?>
-                <a class="btn btn-danger mr-2" href="../Controllers/connexionController.php" title="Laisse un Avis et T'Chat !">
-                    <i class="fa fa-user" aria-hidden="true"></i> Connectes-toi et Participe !</a>
-            <?php } else { ?>
-                <a  href="../Controllers/profilController.php" class="btn btn-success mr-1">Bonjour <?= ucfirst(strip_tags($_SESSION['auth']['firstname'])) ?> </a>
-                <a href="../Controllers/logoutController.php" class="btn btn-danger mr-1"><i class="fas fa-sign-out-alt">Déconnexion</i></a>
-            <?php } ?>
-            <a class="btn btn-warning" href="tchat.php"><i class="fa fa-comments" aria-hidden="true"></i> T'Chat</a>
             <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
-            <button class="search btn btn-outline-info  my-sm-0" type="submit">Rechercher</button>
+            <button class="search btn btn-outline-info mr-1" type="submit">Rechercher</button>
+            <?php if (!isset($_SESSION['auth']['login'])) { ?>
+                <a  href="../Controllers/connexionController.php" class="btnConnect btn btn-danger mr-2" title="Laisse un Avis et T'Chat !"><i class="fa fa-user" aria-hidden="true"></i> Connectes-toi et Participe !</a>     
+            <?php } else { ?>
+                <a  href="../Controllers/profilController.php" class="btnUser btn btn-outline-success mr-1"><i class="fa fa-user" aria-hidden="true"></i>&nbsp<?= ucfirst(strip_tags($_SESSION['auth']['firstname'])) ?> </a>
+                <a href="../Controllers/logoutController.php" class="btnOut btn btn-outline-info mr-1">Déconnexion</a>-
+            <?php } ?>
         </form>
     </nav>         
 </div>
