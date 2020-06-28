@@ -15,7 +15,7 @@ require_once '../Models/DataBase.php';
  $errors = [];
 
  $textRegex = '/\w+/';
- $noteRegex = '/d{2}\/\d{2}/';
+ $noteRegex = '/\d{1}|\d{2}/';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      
@@ -26,16 +26,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 // veriff du champ texte
     $textView = trim(filter_input(INPUT_POST, 'textView', FILTER_SANITIZE_STRING));
-    if (empty($texte) || !preg_match($textRegex, $texte)) {
-        $errors['texte'] = 'Le texte de l\'avis comprend des caractères inappropriés !';
+    if (empty($textView) || !preg_match($textRegex, $textView)) {
+        $errors['textView'] = 'Le texte de l\'avis comprend des caractères inappropriés !';
     }
 
 //verif du champ note
-    $note = trim(filter_input(INPUT_POST, 'note', FILTER_SANITIZE_INT));
+    
+    $note = trim(filter_input(INPUT_POST, 'note', FILTER_SANITIZE_NUMBER_INT));
     if (empty($note) || !preg_match($noteRegex, $note)) {
     $errors['note'] = 'Le texte de l\'avis comprend des caractères inappropriés !';
     }
-
+// verif date
+    $publishDate = trim(filter_input(INPUT_POST, 'publishDate', FILTER_SANITIZE_STRING));
+    if (empty($publishDate) ) {   // ajouter regex date *************************************************************************************
+    $errors['publishDate'] = 'La comprend des caractères inappropriés !';
+    }
 
 // on récupère l'id de l'article sur lequel l'avis va être posté
     $oneArticle = new Article();
@@ -55,24 +60,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      if (count($errors) == 0) {
         $view = new View($title, $textView, $note, $publishDate, $id_users, $id_articles);
        
-        try {
-            $view->create();
+      try { 
+            $view->create(); // on enregistre les infos dans la BDD
             $success = true;
-            $sleep = 4;
-            header('Refresh:' . $sleep . ';http://../Controllers/accueilController.php');
-
-        } catch (PDOException $ex) {
-            echo 'Votre avis n\'a pas pu être transmis pour validation.' . $ex->getMessage();
-            die();
+                 
+            } catch (PDOException $ex) {
+                echo 'Votre avis n\'a pas pu être transmis pour validation.' . $ex->getMessage();
+                die();
+            }
         }
-    }
+         
 }    
 // on verifie d'avoir la référence de l'article sur lequel on va deposer un avis
 if (isset($_GET['article'])){
     $oneArticle = new article();
     $oneArticle->id = filter_input(INPUT_GET, 'article', FILTER_SANITIZE_STRING);
     $oneArticle->getOneById();
-    
+    if ((isset($success)) && ($success == true)){
+        header( "Refresh:4; url=../Controllers/accueilController.php", true, 303);
+    }
     require_once '../Views/addreview.php';
 }
 else {

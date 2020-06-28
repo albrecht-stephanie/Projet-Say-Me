@@ -90,11 +90,11 @@ require_once '../Views/includes/header.php';
                   <!--end card--> 
             <?php //}
             //} ?>
-   <!--</div>
+   </div>
   </div>
 </div>
 
 <script type="text/javascript" src="//cookie.eurowebpage.com/cookie.js?skin=cookielaw1&amp;position=bottom&amp;animation=shake
 &amp;accept_text=Accepter&amp;learnmore=&amp;morelink="></script>
 
-<?php //include '../Views/includes/footer.php' ?>
+<?php include '../Views/includes/footer.php' ?>

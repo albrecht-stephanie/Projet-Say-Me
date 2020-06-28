@@ -60,12 +60,12 @@ class View {
     }
     
     public function create() {
-        $sql = 'INSERT INTO `views`(`title`,`textView`,`note`) VALUES (:title, :textView, :note)';
+        $sql = 'INSERT INTO `views`(`title`,`textView`,`note`,`publishDate`,`id_users`,`id_articles`,`statut`) VALUES (:title, :textView, :note, :publishDate ,:id_users ,:id_articles, :statut )';
         $req = $this->db->prepare($sql);
-        $req->bindValue('::title', $this->title, PDO::PARAM_STR);
+        $req->bindValue(':title', $this->title, PDO::PARAM_STR);
         $req->bindValue(':textView', $this->textView, PDO::PARAM_STR);
         $req->bindValue(':note', $this->note, PDO::PARAM_INT);
-        $req->bindValue(':publishDate', $this->publishDate, PDO::PARAM_INT);
+        $req->bindValue(':publishDate', $this->publishDate, PDO::PARAM_STR);
         $req->bindValue(':id_users', $this->id_users, PDO::PARAM_INT);
         $req->bindValue(':id_articles', $this->id_articles, PDO::PARAM_INT);
         $req->bindValue(':statut', $this->statut, PDO::PARAM_INT);
