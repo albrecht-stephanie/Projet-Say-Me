@@ -14,6 +14,7 @@ $views = new View();
 
 //verication si il existe un ou des avis pour cet article si oui affichage sinon message erreur
 $views->id_articles = filter_input(INPUT_GET, 'article', FILTER_VALIDATE_INT); 
+
 $allViews = $views->getAll();
 
 if($allViews == 0){

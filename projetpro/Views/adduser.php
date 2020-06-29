@@ -55,7 +55,7 @@ require_once '../Views/includes/header.php';
             </div>
             </div>
     <div class="form md-form">
-        <label for="password">Mot de passe : </label>
+        <label for="password">Mot de passe (8caractères, 1 Majuscule, 1 Minuscule, 1 chiffre, 1 caractère spécial): </label>
         <input autocomplete="false" name="password" type="password"
             class="form-control <?= (isset($isSubmit) && !isset($errors['password'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['password'])) ? 'is-invalid' : '' ?>"
             id="password" required>

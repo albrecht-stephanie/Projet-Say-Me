@@ -8,21 +8,24 @@ require_once '../Views/includes/header.php';
       Bienvenue ! Partagez votre expérience utilisateur avec toute la communauté sur tous les produits.</p>
     <!-- card article-->
     <h2>Les derniers articles publiés</h2>
-    <div class="row alignCard d-flex justify-content-around mx-auto">
+    <div class="row d-flex align-items-stretch">
       <!--boucle permettant d'afficher la requête SQL : class Article, public function threeLastPublish-->
+         
       <?php 
       $lastPublish= $article->threeLastPublish();   
+   
         foreach ($lastPublish as $plublish){
-                            ?>
 
+                            ?>
+<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 p-2 d-flex align-items-stretch">
       <!--card-->
       <div class="card ">
         <div class="card-header">
-          <h3><?= $plublish['name']?></h3>
+          <h3><?= substr($plublish['name'],0,300).'...'?></h3>
         </div>
         <div class="card-body">
-          <img src="../assets/img/articles/<?= $plublish['image']?>" alt="<?= $plublish['name']?>">
-          <p class="card-text"><?= $plublish['startdescrib']?><br></p>
+          <img class="img-fluid col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3"  src="../assets/img/articles/<?= $plublish['image']?>" alt="<?= $plublish['name']?>">
+          <p class="card-text"><?= substr($plublish['startdescrib'],0,300).'...'?><br></p>
 
           <!-- bouton ouvrant la modal des caractérisques-->
           <button type="button" class="btn modaldesc btn-primary" data-toggle="modal"
@@ -59,7 +62,7 @@ require_once '../Views/includes/header.php';
           </div>
         </div>
         <!-- fin de la modal -->
-      </div>
+      </div></div>
       <?php } ?>
     </div>
 

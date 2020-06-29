@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="nicemenu-item">
-                            <h5><a href="../Controllers/categorieController.php?id_categorie=2" id_categories ="2">Tablette</a></h5>
+                            <h5><a href="../Controllers/categorieController.php?id_categories=2" id_categories ="2">Tablette</a></h5>
                             <div class="nicemenu-sub">
                                 <!-- <div class="w-3-1">
                                     <h6>Samsung</h6>
@@ -113,7 +113,7 @@
                                 <div class="w-3-1">
                                     <h6><a href="../Controllers/marqueController.php?id_marques=12" id_marques = "12">Lenovo</h6>
                                     <ul>
-                                        <li><<a href="../Controllers/articleController.php?id=10" id = "10">Ideapad S340-15API</a></li>
+                                        <li><a href="../Controllers/articleController.php?id=10" id = "10">Ideapad S340-15API</a></li>
                                     </ul>
                                 </div>
                             </div>

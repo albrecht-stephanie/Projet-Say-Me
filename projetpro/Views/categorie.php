@@ -4,7 +4,9 @@ if (isset($success)) {
 ?>
 
 <div class="container">
-  <div class="row d-flex justify-content-around">
+  <div class="row">
+  <div class="d-flex align-items-stretch justify-content-around">
+  
 <!--boucle permettant d'afficher la requête SQL : class Article, public function getcategorie$categorie-->
     <?php
         
@@ -12,6 +14,8 @@ if (isset($success)) {
                             ?>
 
     <!--card-->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 p-2 d-flex align-items-stretch">
+ 
     <div class="card">
       <div class="card-header">
         <h3><?= $categorie['name']?></h3>
@@ -53,10 +57,10 @@ if (isset($success)) {
             </div>
           </div>
         </div>
-      </div>
+      </div></div>
     <?php } 
     ?>
-  </div>
+  </div></div>
 </div>
 <!--end card article-->
 <?php

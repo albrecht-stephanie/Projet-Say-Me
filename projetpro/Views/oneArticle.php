@@ -2,16 +2,15 @@
 require_once '../Views/includes/header.php';
 if (isset($success)) {
 ?>
-<!--<h2> //$article['name']></h2>-->
 <div class="container">
-  <div class="row d-flex justify-content-around">
+  <div class="row col-sm-12 col-lg-10 offset-2">
     <!--card-->
-    <div class="card">
+    <div class="card customCard">
       <div class="card-header">
         <h3><?= $oneArticle->name ?></h3>
       </div>
       <div class="card-body">
-        <img src="../assets/img/articles/<?= $oneArticle->image ?>" alt="<?= $oneArticle->name ?>">
+        <img src="../assets/img/articles/<?= $oneArticle->image ?>" id="imgCard" alt="<?= $oneArticle->name ?>">
         <p class="card-text"><?= $oneArticle->startdescrib ?><br></p>
         
         <!-- bouton ouvrant la modal des caractérisques-->

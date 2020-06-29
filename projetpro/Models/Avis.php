@@ -97,7 +97,7 @@ class View {
         //SELECT v.id,`title`,`textView`,`note`,u.lastname, u.firstname ,DATE_FORMAT(v.publishDate, \'%d.%m.%Y %H:%i\') AS `publishDate` FROM views v  INNER JOIN `users` u ON v.id_users = u.id  WHERE `status` = 1
     public function getAll() {
     // le code sélectionnant tous les avis d'un article
-        $sql = 'SELECT v.id,`title`,`textView`,`note`,u.lastname, u.firstname ,DATE_FORMAT(v.publishDate, \'%d.%m.%Y %H:%i\') AS `publishDate` FROM views v  INNER JOIN `users` u ON v.id_users = u.id  WHERE `status` = 1';
+        $sql = 'SELECT v.id,`title`,`textView`,`note`,u.lastname, u.firstname ,DATE_FORMAT(v.publishDate, \'%d.%m.%Y %H:%i\') AS `publishDate` FROM views v  INNER JOIN `users` u ON v.id_users = u.id  WHERE `status` = 1 AND `id_articles` = :id_articles';
         $req = $this->db->prepare($sql);
         $req->bindValue(':id_articles', $this->id_articles, PDO::PARAM_INT);
 

@@ -1,8 +1,8 @@
 <?php 
 require_once '../Views/includes/header.php';
 
-if (isset($error)) {?>
-<p class="alert alert-danger text-center">Il n'y pas encore d'avis pour cet article</p>
+if (!isset($allViews)) {?>
+<p class="alert alert-danger text-center col-10 offset-1">Il n'y pas encore d'avis pour cet article</p>
 <?php } 
 else { ?>
 <!--Début card avis-->
@@ -13,7 +13,8 @@ else { ?>
 <!--boucle pernettant d'afficher tous les avis d'un article-->
         <?php foreach ($allViews as $oneView) { ?>
             <!--card view-->
-            <div class="card col-lg-4 offset-1 mr-3">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 p-2 d-flex align-items-stretch">
+            <div class="card offset-1 mr-3">
                 <div class="card-header">
                 <h3> <?= $oneView['title']?></h3>
                 </div>
@@ -23,9 +24,10 @@ else { ?>
                 <div class="card-footer" id="rating">
                 <p>Note: <?= $oneView['note'] ?><br>
                 Publier le : <?= $oneView['publishDate']?><br>
-                Par : <?= $oneView['lastname'].$oneView['firstname'] ?>
+                Par : <?= $oneView['lastname'].' '.$oneView['firstname'] ?>
                 </p>
                 </div>
+            </div>
             </div>
         <!--end card--> 
         <?php } ?>
