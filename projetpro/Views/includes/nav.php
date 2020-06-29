@@ -190,8 +190,6 @@
             </ul>
         </div>
         <form class="form-inline my-lg-0">
-            <input class="form-control mr-sm-2 ml-sm-2" type="text" aria-label="Search">
-            <button class="search btn btn-outline-info mr-1" type="submit">Rechercher</button>
             <?php if (!isset($_SESSION['auth']['login'])) { ?>
                 <a  href="../Controllers/connexionController.php" class="btnConnect btn btn-danger mr-2" title="Laisse un Avis et T'Chat !"><i class="fa fa-user" aria-hidden="true"></i> Connectes-toi et Participe !</a>     
             <?php } else { ?>

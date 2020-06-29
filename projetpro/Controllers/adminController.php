@@ -1,6 +1,6 @@
 <?php
 session_start();
-// protection de la page par la session auth
+//on vérifie que l'utilisateur a les droits d'administrateur
 if($_SESSION['auth']['admin'] != 3){
     header('Location: ../Controllers/accueilController.php');
     exit();
@@ -10,31 +10,44 @@ require_once '../Models/User.php';
 require_once '../Models/Avis.php';
 require_once '../Models/DataBase.php';
 
-//on vérifie que l'utilisateur a les droits d'administrateur
+/********* validation d'un article **************/
+if (isset($_POST['validID'])){
+    $validArticle = new View();
+    $validArticle->id = filter_input(INPUT_POST, 'validID', FILTER_VALIDATE_INT);
+    $validArticle->validStatus();
+    $ifValidSuccess = '      
+    <div class="alert alert-primary" role="alert">
+    Avis validé
+  </div>
+    ';
+}
+else{
+    $ifValidSuccess = '';
+}
+/***********************************************/
+/********** suppression d'un article  **********/
+if (isset($_POST['supprID'])){
+    $validArticle = new View();
+    $validArticle->id = filter_input(INPUT_POST, 'supprID', FILTER_VALIDATE_INT);
+    $validArticle->delete();
+    $ifSupprSuccess = '      
+    <div class="alert alert-danger" role="alert">
+    Avis supprimé
+  </div>
+    ';
+}
+else{
+    $ifSupprSuccess = '';
+}
+/***********************************************/
 
-$view = new View();
+/******************* Affichage des articles en attente de validation *************** */
+$views = new View();
+//on affiche tous les avis en status 0 (non publié et en attente de validation)
+//$allValidate->id_articles= filter_input(INPUT_GET, 'id_articles', FILTER_VALIDATE_INT); 
+$validate = $views->getAllValidate();
+$success = true;
+//on passe le status de l'avis à 1
 
-//$user= $users->id_catusers;
-// protection de la page par la session auth
-
- $title = $textView = $note = $publishDate = '';
- $errors = [];
-
- $textRegex = '/\w+/';
- $noteRegex = '/d{2}\/\d{2}/';
-
-//On vérifie si le formulaire de mise à jour a été posté (POST)
-if (count($errors) == 0) {
-    $view->title = $title;
-    $view->textView = $textView;
-    $view->note = $note;
-    if (!$view->update()) {
-        require_once '../Views/errors/503.php';
-        exit();
-    }
-   // $success = true;
-   // $sleep = 4;
-  // header('Refresh:' . $sleep . ';http://'.$_SERVER['HTTP_HOST'].'/Controllers/adminController.php');
-    }
-
-    require_once '../Views/admin.php';
+ 
+require_once '../Views/admin.php';

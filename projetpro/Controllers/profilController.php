@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $users->firstname = $firstname;
         $users->lastname = $lastname;
         $users->email = $email;
-        //$users->password = $password;
+        
         if (!$users->update()) {
             require_once '../Views/errors/503.php';
             exit();
@@ -58,10 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
 }
-else{
-    
-}
-//chargement du front
+
+
 require_once '../Views/profil.php';
 
 ?>

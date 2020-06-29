@@ -8,7 +8,7 @@ require_once '../Views/includes/header.php';
       Bienvenue ! Partagez votre expérience utilisateur avec toute la communauté sur tous les produits.</p>
     <!-- card article-->
     <h2>Les derniers articles publiés</h2>
-    <div class="row d-flex justify-content-around col-lg-10 offset-1 nb-5">
+    <div class="row alignCard d-flex justify-content-around mx-auto">
       <!--boucle permettant d'afficher la requête SQL : class Article, public function threeLastPublish-->
       <?php 
       $lastPublish= $article->threeLastPublish();   

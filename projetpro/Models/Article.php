@@ -105,7 +105,7 @@ class Article {
     
     public function threeLastPublish(){
         //Le code sélectionnant les 3 dernier articles enregistrés
-        $sql = 'SELECT `id`,`name`,`image`,`startdescrib`, `describ`, `publishDate` FROM `articles` WHERE `publishDate` ORDER BY `id` DESC LIMIT 3 ';
+        $sql = 'SELECT `id`,`name`,`image`,`startdescrib`, `describ`, `publishDate` FROM `articles` WHERE `publishDate` ORDER BY `id` DESC LIMIT 6 ';
         $threeLastPublish = [];
         $sth = $this->db->query($sql);
         if ($sth instanceof PDOStatement) {

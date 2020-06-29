@@ -60,6 +60,9 @@ body html {
 .navbar{
     background-color: rgb(77, 87, 145);
 }
+
+
+
 .container-fluid-nav {
     width: 100%;
     margin-top: 100px;
@@ -88,7 +91,7 @@ a:hover {
 
 /*pour mobile*/
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .digimeg-main-nav {
         display: flex;
         flex-direction: column;
@@ -230,7 +233,7 @@ a:hover {
 
 /*pour mobile*/
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
     .nicemenu-item,
     .nicemenu-sub {
         width: 100%;
@@ -252,12 +255,10 @@ a:hover {
     text-align: center;
 }
 
-@media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 60px;
-    }
-    .prez {
-        font-size: 18px;
+@media screen and (max-width: 600px) {
+    .nameSite {
+        font-size: 50px;
+        margin-top: 40%;
     }
 }
 
@@ -271,8 +272,11 @@ a:hover {
     margin-bottom: 2%;
     margin-left: 10%;
 }
-.smile{
-    color: yellow;
+
+@media screen and (max-width: 600px) {
+.prez {
+    font-size: 18px;
+    }
 }
 
 /*************************************************************card*****************************************************************************/
@@ -282,15 +286,28 @@ h2 {
     margin: 3%;
     margin-left: 30%;
 }
+@media screen and (max-width: 600px) {
+    h2{
+        font-size: 18px;
+    }
+}
 
 h3 {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
-
-.title-waiting {
-    margin-left: 15%;
+@media screen and (max-width: 600px) {
+    h3{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 600px) {
+.alignCard{
+    display: flex;
+    flex-direction: column;
+    
+    }
 }
 
 .card {
@@ -300,7 +317,7 @@ h3 {
 }
 
 .card-header{
-    height: 70px;
+    height: 60%;
 }
 
 .modaldesc{
@@ -321,21 +338,6 @@ img {
 .card-footer a {
     color: white;
     margin-bottom: 5px;
-}
-
-
-/*notation étoile*/
-
-#card-footer {
-    direction: rtl;
-    margin-left: 10%;
-}
-
-.card-footer i {
-    color: orange;
-    text-decoration: none;
-    font-size: 1em;
-    transition: color .4s;
 }
 
 
@@ -470,20 +472,6 @@ input[type=checkbox] {
 
 .titleReadProfil{
     color: #fff;
-}
-
-/******************************************************************tchat***************************************************************************/
-
-.tchat-waiting {
-    margin-bottom: 80%;
-}
-
-#waiting {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 10px;
-    margin: auto;
-    margin-top: 2%;
 }
 
 /***************************************************************onearticle********************************************************************************/

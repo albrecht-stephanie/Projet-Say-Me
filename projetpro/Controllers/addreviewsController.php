@@ -16,6 +16,9 @@ require_once '../Models/DataBase.php';
 
  $textRegex = '/\w+/';
  $noteRegex = '/\d{1}|\d{2}/';
+ //$dateRegex = '/^\d{2}\/\d{2}\/\d{4}/';
+ $dateRegex = '/^\d{4}\-\d{2}\-\d{2}/';
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      
@@ -37,10 +40,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors['note'] = 'Le texte de l\'avis comprend des caractères inappropriés !';
     }
 // verif date
+
     $publishDate = trim(filter_input(INPUT_POST, 'publishDate', FILTER_SANITIZE_STRING));
-    if (empty($publishDate) ) {   // ajouter regex date *************************************************************************************
+    if (empty($publishDate) || !preg_match($dateRegex, $publishDate)) {  
     $errors['publishDate'] = 'La comprend des caractères inappropriés !';
     }
+    
+//$publishDate = date('d/m/Y', strtotime($publishDate));
 
 // on récupère l'id de l'article sur lequel l'avis va être posté
     $oneArticle = new Article();

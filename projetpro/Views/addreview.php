@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 </div>
                 <div class="form-group">
                     <label for="note">Note /10: </label>
-                    <input autocomplete="false" name="note" type="number" max="10" value ="5"
+                    <input autocomplete="false" name="note" type="number" max="10" min="1" value ="5"
                         class="form-control <?= (isset($isSubmit) && !isset($errors['note'])) ? 'is-valid' : '' ?> <?= (isset($isSubmit) && isset($errors['note'])) ? 'is-invalid' : '' ?>"
                         id="note" required>
                     <div class="invalid-feedback">
